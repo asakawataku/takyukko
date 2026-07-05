@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>たきゅっこ暮らし｜勝っても負けても卓球好き</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+img{width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#222;background:#fff;line-height:1.8}
+
+.header{position:fixed;top:0;left:0;width:100%;height:50px;padding:0 20px;display:flex;justify-content:space-between;align-items:center;z-index:1000;backdrop-filter:blur(12px);background:rgba(255,255,255,0.55);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);}
+
+.logo{font-size:18px;font-weight:bold}
+
+.hamburger{width:30px;height:22px;border:none;background:none;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;z-index:1003}
+.hamburger span{display:block;width:100%;height:2px;background:#000000;transition:.4s }
+.hamburger.active span:nth-child(1){transform:translateY(10px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
+
+.fullscreen-menu{
+padding-top:70px;
+position:fixed;inset:0;
+background:linear-gradient(135deg,#111,#222);
+box-shadow:0 0 30px rgba(255, 255, 255, 0.08);
+display:flex;justify-content:center;align-items:center;
+opacity:0;visibility:hidden;transition:.5s;z-index:1002}
+.fullscreen-menu.active{opacity:1;visibility:visible}
+.fullscreen-menu ul{
+  width:80%;
+  max-width:400px;
+}
+
+.fullscreen-menu li{
+  padding:22px 0;
+  border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+.fullscreen-menu li:last-child{
+  border-bottom:none;
+}
+
+.fullscreen-menu a{
+  display:block;
+  text-align:center;
+  color:#fff;
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:.15em;
+  transition:.3s;
+}
+
+.fullscreen-menu a:hover{
+  transform:translateY(-2px);
+  opacity:.8;
+}
+
+.fullscreen-menu a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+}
+
+.fullscreen-menu small{
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:.2em;
+  opacity:.7;
+}
+
+.hero{
+    position:relative;
+    height:calc(100vh - 80px);
+    margin-top:50px;
+    overflow:hidden;
+    touch-action:pan-y;
+}
+.hero-slider,.slide{position:absolute;inset:0}
+.slide{opacity:0;transition:1.2s}
+.slide.active{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;}
+.hero-copy{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:3}
+.slider-dots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5)}
+.dot.active{background:#fff}
+
+section{padding:70px 20px}
+section h2{
+    position:relative;
+    font-size:34px;
+    font-weight:800;
+    text-align:center;
+    margin-bottom:50px;
+    letter-spacing:.08em;
+}
+
+section h2::before{
+    content:attr(data-en);
+    position:absolute;
+    left:50%;
+    top:-20px;
+    transform:translateX(-50%);
+    font-size:70px;
+    font-weight:900;
+    color:#f2f2f2;
+    z-index:-1;
+    letter-spacing:.12em;
+}
+
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.menu-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.menu-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+.menu-card:hover {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.menu-card:hover img {
+  transform: scale(1.08);
+}
+
+.menu-content{padding:16px}
+
+.news article{padding:24px 0;border-bottom:1px solid #eee}
+.date{display:block;color:#888;font-size:12px;margin-bottom:8px}
+
+.youtube{
+  padding:70px 0;
+}
+
+.youtube h2,
+.youtube-info,
+.more-btn{
+  padding:0 20px;
+}
+
+.youtube-card{
+  display:block;
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  position:relative;
+  overflow:hidden;
+  margin-bottom: 20px;
+}
+
+.youtube-card img{
+  width:100%;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+
+
+
+.play-button{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:90px;
+  height:90px;
+  background:#ff0000;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:42px;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.more-btn{display:block;width:220px;margin:24px auto 0;padding:14px;text-align:center;border-radius:999px;background:#111;color:#fff;font-weight:bold}
+
+.about-card{background:#f7f7f7;padding:40px 30px;border-radius:24px}
+.about{
+
+padding:100px 20px;
+overflow:hidden;
+
+}
+
+.about-sub{
+
+text-align:center;
+margin-top:-25px;
+margin-bottom:60px;
+color:#666;
+font-size:15px;
+
+}
+
+.about-wrap{
+
+display:grid;
+gap:60px;
+align-items:center;
+
+}
+
+.about-image{
+
+display:flex;
+justify-content:center;
+
+}
+
+.about-image img{
+
+width:100%;
+max-width:520px;
+aspect-ratio:4/3;
+
+object-fit:cover;
+
+border-radius:45%;
+
+filter:blur(.3px);
+
+mask-image:radial-gradient(
+    ellipse at center,
+    black 55%,
+    transparent 95%
+);
+
+-webkit-mask-image:radial-gradient(
+    ellipse at center,
+    black 55%,
+    transparent 95%
+);
+box-shadow:0 40px 80px rgba(0,0,0,.12);
+
+}
+
+.about{
+
+position:relative;
+
+}
+
+.about::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(circle at 20% 40%,
+rgba(255,223,180,.35),
+transparent 35%),
+radial-gradient(circle at 80% 60%,
+rgba(255,230,200,.3),
+transparent 35%);
+
+z-index:-1;
+
+}
+
+
+.about-text h3{
+    font-size:30px;
+    line-height:1.8;
+    letter-spacing:.05em;
+}
+
+.about-text p{
+
+font-size:18px;
+margin-bottom:28px;
+line-height:2;
+
+}
+
+
+
+.banner {
+  width: 100%;
+  height: 250px; /* 横長の高さ */
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background: url("images/your-image.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+/* うっすら暗くするオーバーレイ */
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.banner-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+
+  /* 赤系グラデーション */
+  background: linear-gradient(135deg, #ff4d4d, #d60000);
+
+  /* ちょい立体感 */
+  box-shadow: 0 6px 15px rgba(214, 0, 0, 0.35);
+
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(214, 0, 0, 0.55);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(214, 0, 0, 0.3);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.btn:hover::after {
+  transform: scale(1);
+}
+
+@media(min-width:900px){
+
+.about-wrap{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+
+
+.sns-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sns-links a{border:1px solid #ddd;border-radius:999px;padding:14px;text-align:center;transition:.3s}
+.sns-links a:hover{background:#111;color:#fff;border-color:#111;}
+footer{padding:50px 20px;text-align:center;border-top:1px solid #eee;font-size:13px;color:#666}
+@media(min-width:768px){body{max-width:430px;margin:auto}}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="logo">たきゅっこ暮らし</div>
+<button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="fullscreen-menu" id="fullscreenMenu">
+<ul>
+<li><a href="#">TEAM<small>チームについて</small></a></li>
+<li><a href="#">試合情報</a></li>
+<li><a href="movie.html">動画</a></li>
+<li><a href="#">イベント</a></li>
+<li><a href="#">SNS</a></li>
+<li><a href="#">お問い合わせ</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-slider">
+<div class="slide active"><img src="images/hero01.jpg"></div>
+<div class="slide"><img src="images/hero02.jpg"></div>
+<div class="slide"><img src="images/hero03.jpg"></div>
+<div class="slide"><img src="images/hero04.jpg"></div>
+<div class="slide"><a href="https://www.youtube.com/watch?v=SuEVVsaPgVA"><img src="images/hero05.jpg"></a></div>
+</div>
+<!-- 
+<div class="hero-copy">
+<h1>たきゅっと暮らし</h1>
+<p>卓球をもっと身近に</p>
+</div>
+-->
+<div class="slider-dots">
+<span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+</section>
+
+<section class="banner">
+  <div class="banner-content">
+    <h1>憧れは捨てよ、原点へ戻れ</h1>
+    <p>ハイエンドの性能でコスパ最強、初中級者おすすめの逸品</p>
+    <a href="#" class="btn">ラバーはこちらから</a>
+  </div>
+</section>
+
+
+<section class="menu-section">
+<h2 data-en="MENU">MENU</h2>
+<div class="menu-grid">
+<a href="#" class="menu-card"><img src="images/menu01.jpg"><div class="menu-content"><h3>TEAM</h3><p>チーム紹介はこちら</p></div></a>
+<a href="#" class="menu-card"><img src="images/menu02.jpg"><div class="menu-content"><h3>NEWS</h3><p>最新情報はこちら</p></div></a>
+<a href="#" class="menu-card"><img src="images/menu03.jpg"><div class="menu-content"><h3>MOVIE</h3><p>おすすめ動画コンテンツ</p></div></a>
+<a href="#" class="menu-card"><img src="images/menu04.jpg"><div class="menu-content"><h3>MATCH</h3><p>千葉・東京など試合情報</p></div></a>
+<a href="#" class="menu-card"><img src="images/menu05.jpg"><div class="menu-content"><h3>EVENT</h3><p>チーム練習・イベント情報</p></div></a>
+<a href="#" class="menu-card"><img src="images/menu06.jpg"><div class="menu-content"><h3>ADVISER</h3><p>特別に上手くなりたい方へ</p></div></a>
+</div>
+</section>
+
+<section class="news">
+  <h2 data-en="NEWS">お知らせ</h2>
+  <article><span class="date">2026.06.21</span><h3>ホームページをリニューアルしました</h3></article>
+  <article><span class="date">2026.06.15</span><h3>試合結果を掲載しました</h3></article>
+</section>
+
+<section class="youtube">
+  <h2 data-en="MOVIE">動画</h2>
+  <a href="https://www.youtube.com/watch?v=ViSLNF2pRU0"
+  target="_blank"
+  class="youtube-card">
+
+ <img src="https://img.youtube.com/vi/ViSLNF2pRU0/maxresdefault.jpg"
+      alt="YouTube動画">
+ <div class="play-button">▶</div>
+</a>
+<div class="youtube-info">
+<h3>卓キチvs.じんたく　世界一のサーブ</h3>
+<p>数年前のプレイ動画ですが、今見ても本当に面白い一戦です。アマチュアとプロの差を肌で感じられる内容で、
+  神拓也さんのサーブからの3球目攻撃はとても参考になります。3セット目は気迫あふれるラリーが続き、
+  見応え抜群！プレーだけでなく、人柄の良さも伝わってくるおすすめの一本です。</p>
+</div>
+<a href="movie.html" class="more-btn">MORE VIEW</a>
+</section>
+
+<section class="about">
+
+  <h2 data-en="ABOUT">ABOUT</h2>
+  <p class="about-sub">たきゅっこ暮らしについて</p>
+  
+  <div class="about-wrap">
+  
+      <div class="about-image">
+          <img src="images/about.jpg" alt="">
+      </div>
+  
+      <div class="about-text">
+          <h3>卓球が、もっと好きになる。</h3>
+          <p>たきゅっこ暮らしは、卓球を通じて人と人をつなげるコミュニティサイトです。アマチュアだからこそ感じる楽しさや悩み、練習内容や技術などを、コミカルに発信しています。卓球がもっと好きになり、少しでも上達するきっかけになればと陰ながら応援します。</p>
+      </div>
+    </section>
+      <!--
+<div class="about-card">
+<h2 data-en="ABOUT">ABOUT</h2>
+<p>たきゅっこ暮らしは卓球を通じて人と人を繋げるコミュニティサイトです。</p>
+<p>マチュアだからこそ感じる楽しさや悩み、練習方法や技術などを、コミカルに発信しています。卓球がもっと好きになり、少しでも上達するきっかけになれば嬉しいです。</p>
+</div>
+</section>
+ -->
+<section class="sns">
+<h2 data-en="SNS">SNS</h2>
+<div class="sns-links">
+<a href="#">Instagram</a>
+<a href="#">X</a>
+<a href="#">YouTube</a>
+<a href="#">LINE</a>
+</div>
+</section>
+
+<footer>© TAKYUTTO</footer>
+
+<script>
+const hamburger=document.getElementById("hamburger");
+const menu=document.getElementById("fullscreenMenu");
+hamburger.addEventListener("click",()=>{
+ hamburger.classList.toggle("active");
+ menu.classList.toggle("active");
+});
+
+document.querySelectorAll(".fullscreen-menu a").forEach(link=>{
+ link.addEventListener("click",()=>{
+  hamburger.classList.remove("active");
+  menu.classList.remove("active");
+ });
+});
+
+const slides=document.querySelectorAll(".slide");
+const dots=document.querySelectorAll(".dot");
+const hero=document.querySelector(".hero");
+
+let current=0;
+
+function showSlide(i){
+ slides.forEach(s=>s.classList.remove("active"));
+ dots.forEach(d=>d.classList.remove("active"));
+
+ slides[i].classList.add("active");
+ dots[i].classList.add("active");
+ current=i;
+}
+
+function nextSlide(){
+ let next=(current+1)%slides.length;
+ showSlide(next);
+}
+
+function prevSlide(){
+ let prev=(current-1+slides.length)%slides.length;
+ showSlide(prev);
+}
+
+setInterval(()=>{
+ nextSlide();
+},5000);
+
+dots.forEach((dot,i)=>{
+ dot.addEventListener("click",()=>{
+  showSlide(i);
+ });
+});
+
+/* フェイドアップjs */
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll("section h2").forEach(title=>{
+    title.classList.add("fade-up");
+    observer.observe(title);
+});
+
+/* スワイプ操作 */
+
+let startX=0;
+let endX=0;
+
+hero.addEventListener("touchstart",(e)=>{
+ startX=e.touches[0].clientX;
+});
+
+hero.addEventListener("touchend",(e)=>{
+ endX=e.changedTouches[0].clientX;
+
+ const diff=startX-endX;
+
+ if(diff>50){
+  nextSlide();
+ }
+
+ if(diff<-50){
+  prevSlide();
+ }
+});
+</script>
+</body>
+</html>
