@@ -1,4 +1,4 @@
-<script>
+
 const hamburger=document.getElementById("hamburger");
 const menu=document.getElementById("fullscreenMenu");
 hamburger.addEventListener("click",()=>{
@@ -85,4 +85,89 @@ hero.addEventListener("touchend",(e)=>{
   prevSlide();
  }
 });
-</script>
+
+const movieMoreBtn = document.getElementById("movieMoreBtn");
+const movieSliderArea = document.getElementById("movieSliderArea");
+const movies = [
+    {
+      title: "卓キチvs.じんたく 世界一のサーブ",
+      url: "https://www.youtube.com/watch?v=ViSLNF2pRU0"
+    },
+    {
+      title: "おすすめ動画",
+      url: "https://www.youtube.com/watch?v=SuEVVsaPgVA"
+    },
+    {
+      title: "動画３",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        title: "動画３",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        title: "動画３",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+    
+  ];
+  
+  const movieSlider = document.getElementById("movieSlider");
+  
+  movies.forEach(movie => {
+  
+      const videoId = getVideoId(movie.url);
+  
+      movieSlider.innerHTML += `
+          <a href="${movie.url}"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="movie-slide">
+  
+              <div class="movie-slide-image">
+  
+                  <img
+                      src="https://img.youtube.com/vi/${videoId}/maxresdefault.jpg"
+                      alt="${movie.title}">
+  
+                  <span class="movie-play">▶</span>
+  
+              </div>
+  
+              <h3>${movie.title}</h3>
+  
+          </a>
+      `;
+  
+  });
+  
+  
+  function getVideoId(url){
+  
+      if(url.includes("youtu.be")){
+          return url.split("/").pop();
+      }
+  
+      const params = new URL(url).searchParams;
+  
+      return params.get("v");
+  
+  }
+
+  movieMoreBtn.addEventListener("click", () => {
+    movieSliderArea.classList.toggle("active");
+  
+    if (movieSliderArea.classList.contains("active")) {
+      movieMoreBtn.textContent = "CLOSE";
+  
+      setTimeout(() => {
+        movieSliderArea.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
+      }, 300);
+  
+    } else {
+      movieMoreBtn.textContent = "MORE VIEW";
+    }
+  });
