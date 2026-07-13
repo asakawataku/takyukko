@@ -94,20 +94,20 @@ const movies = [
       url: "https://www.youtube.com/watch?v=ViSLNF2pRU0"
     },
     {
-      title: "おすすめ動画",
-      url: "https://www.youtube.com/watch?v=SuEVVsaPgVA"
+      title: "【ハイライト】世界卓球2025<br/>混合ダブルス準々決勝<br/>吉村真晴/大藤沙月 vs 林詩棟/蒯曼",
+      url: "https://www.youtube.com/watch?v=1ol7vgOSVoE"
     },
     {
-      title: "動画３",
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      title: "全日本マスターズ王者！松平vs飯野<br/>健太敗北か？",
+      url: "https://www.youtube.com/watch?v=G9EZGCgJuj0&t=10s"
     },
     {
-        title: "動画３",
-        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        title: "卓球で世界１位を目指す<br/>おすすめ青春映画<br>ヒーロー見参！",
+        url: "https://www.youtube.com/watch?v=Ag1_qXys2Io"
     },
     {
-        title: "動画３",
-        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        title: "ぜロから始める！モンスターYGサーブ",
+        url: "https://www.youtube.com/watch?v=rYRVlJoPyWE"
     }
     
   ];
