@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JQB91W7233"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JQB91W7233');
+</script>
+  <meta name="description" content="千葉・東京を中心とした卓球大会スケジュール一覧です。">
+  <title>たきゅっこ暮らし｜勝っても負けても卓球好き</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/match.css">
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo">
+      <span class="logo-title">たきゅっこ暮らし</span>
+      <span class="logo-sub">〜 勝っても負けても、卓球好き。〜</span>
+    </a>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="fullscreen-menu" id="fullscreenMenu">
+    <ul>
+    <li><a href="#">TEAM<small>チームについて</small></a></li>
+    <li><a href="#">試合情報</a></li>
+    <li><a href="movie.html">動画</a></li>
+    <li><a href="#">イベント</a></li>
+    <li><a href="#">SNS</a></li>
+    <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="match-hero">
+      <img class="match-hero__image" src="images/match-hero.jpg" alt="卓球大会の試合会場">
+      <div class="match-hero__overlay"></div>
+      <div class="match-hero__content">
+        <p class="match-hero__eyebrow">TABLE TENNIS TOURNAMENT</p>
+        <h1><span>MATCH</span>SCHEDULE</h1>
+        <p class="match-hero__lead">千葉・東京の卓球大会スケジュール</p>
+      </div>
+      <p class="match-hero__notice">最新の大会情報を<br>随時更新しています</p>
+    </section>
+
+    <section class="match-section" aria-labelledby="match-list-title">
+      <div class="match-container">
+        <h2 id="match-list-title" class="visually-hidden">大会一覧</h2>
+
+        <div class="match-tabs" role="tablist" aria-label="地域で絞り込み">
+          <button class="match-tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">ALL<small>すべて</small></button>
+          <button class="match-tab" type="button" data-filter="chiba" role="tab" aria-selected="false">CHIBA<small>千葉県</small></button>
+          <button class="match-tab" type="button" data-filter="tokyo" role="tab" aria-selected="false">TOKYO<small>東京都</small></button>
+          <button class="match-tab" type="button" data-filter="other" role="tab" aria-selected="false">OTHER<small>その他の地域</small></button>
+        </div>
+
+        <div class="match-list" id="matchList">
+          <article class="match-card reveal" data-area="chiba">
+            <time class="match-date" datetime="2025-07-20"><span>2025</span><strong>07.20</strong><b>SUN</b></time>
+            <div class="match-card__body">
+              <p class="match-card__area">CHIBA</p>
+              <h3>千葉市オープン卓球大会</h3>
+              <div class="match-card__meta">
+                <span>⌖ 千葉ポートアリーナ</span>
+                <span>♙ 一般・年代別</span>
+              </div>
+              <div class="match-info">
+                <p class="match-info__title">大会の特徴</p>
+              
+                <ul class="match-info__list">
+                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
+                  <li>女性参加者が多め</li>
+                  <li>冷房あり</li>
+                </ul>
+              </div>
+              <p class="match-card__host">主催：千葉市卓球協会</p>
+              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
+            </div>
+            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="千葉ポートアリーナ"></div>
+          </article>
+
+          <article class="match-card reveal" data-area="tokyo">
+            <time class="match-date" datetime="2025-07-27"><span>2025</span><strong>07.27</strong><b>SUN</b></time>
+            <div class="match-card__body">
+              <p class="match-card__area">TOKYO</p>
+              <h3>城東卓球選手権大会</h3>
+              <div class="match-card__meta">
+                <span>⌖ 江戸川区スポーツセンター</span>
+                <span>♙ シングルス</span>
+              </div>
+              <div class="match-info">
+                <p class="match-info__title">大会の特徴</p>
+              
+                <ul class="match-info__list">
+                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
+                  <li>女性参加者が多め</li>
+                  <li>冷房あり</li>
+                </ul>
+              </div>
+              <p class="match-card__host">主催：城東卓球連盟</p>
+              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
+            </div>
+            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="江戸川区スポーツセンター"></div>
+          </article>
+
+          <article class="match-card reveal" data-area="chiba">
+            <time class="match-date" datetime="2025-08-03"><span>2025</span><strong>08.03</strong><b>SUN</b></time>
+            <div class="match-card__body">
+              <p class="match-card__area">CHIBA</p>
+              <h3>習志野市民卓球大会</h3>
+              <div class="match-card__meta">
+                <span>⌖ 習志野市総合体育館</span>
+                <span>♙ 一般・学生</span>
+              </div>
+              <div class="match-info">
+                <p class="match-info__title">大会の特徴</p>
+              
+                <ul class="match-info__list">
+                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
+                  <li>女性参加者が多め</li>
+                  <li>冷房あり</li>
+                </ul>
+              </div>
+              <p class="match-card__host">主催：習志野市卓球協会</p>
+              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
+            </div>
+            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="習志野市総合体育館"></div>
+          </article>
+
+          <article class="match-card reveal" data-area="tokyo">
+            <time class="match-date" datetime="2025-08-17"><span>2025</span><strong>08.17</strong><b>SUN</b></time>
+            <div class="match-card__body">
+              <p class="match-card__area">TOKYO</p>
+              <h3>第38回 東京都オープン</h3>
+              <div class="match-card__meta">
+                <span>⌖ 駒沢オリンピック公園総合運動場体育館</span>
+                <span>♙ 一般・年代別</span>
+              </div>
+              <div class="match-info">
+                <p class="match-info__title">大会の特徴</p>
+              
+                <ul class="match-info__list">
+                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
+                  <li>女性参加者が多め</li>
+                  <li>冷房あり</li>
+                </ul>
+              </div>
+              <div class="match-level">
+                <p class="match-level__title">出没クラス</p>
+                <p class="match-level__text">
+                  関東大学リーグ3部レギュラー〜元全日本クラス
+                </p>
+              </div>
+              <p class="match-card__host">主催：東京都卓球連盟</p>
+              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
+            </div>
+            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="駒沢オリンピック公園総合運動場体育館"></div>
+          </article>
+
+          <article class="match-card reveal" data-area="other">
+            <time class="match-date" datetime="2025-08-24"><span>2025</span><strong>08.24</strong><b>SUN</b></time>
+            <div class="match-card__body">
+              <p class="match-card__area">OTHER</p>
+              <h3>関東オープン卓球交流大会</h3>
+              <div class="match-card__meta">
+                <span>⌖ 横浜武道館</span>
+                <span>♙ 団体戦</span>
+              </div>
+              <div class="match-info">
+                <p class="match-info__title">🏓 大会の特徴</p>
+              
+                <ul class="match-info__list">
+                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
+                  <li>女性参加者が多め</li>
+                  <li>冷房あり</li>
+                </ul>
+              </div>
+              <p class="match-card__host">主催：関東卓球交流会</p>
+              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
+            </div>
+            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="横浜武道館"></div>
+          </article>
+        </div>
+
+        <p class="match-empty" id="matchEmpty" hidden>該当する大会情報はまだありません。</p>
+
+        <div class="match-info-grid reveal">
+          <section class="info-panel">
+            <div class="info-panel__icon" aria-hidden="true">▣</div>
+            <div>
+              <h3>大会情報の掲載について</h3>
+              <p>大会主催者の方で、情報掲載をご希望の方はお問い合わせフォームよりご連絡ください。</p>
+              <a href="./contact.html">お問い合わせはこちら <span>→</span></a>
+            </div>
+          </section>
+
+          <section class="area-panel">
+            <h3>エリアから探す</h3>
+            <div class="area-panel__layout">
+              <div class="area-panel__map" aria-hidden="true">JAPAN</div>
+              <div class="area-panel__links">
+                <button type="button" data-jump-filter="chiba">千葉県の大会を見る <span>→</span></button>
+                <button type="button" data-jump-filter="tokyo">東京都の大会を見る <span>→</span></button>
+                <button type="button" data-jump-filter="other">その他の地域を見る <span>→</span></button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="team-cta reveal">
+          <img src="images/team-cta.jpg" alt="卓球ラケットとボール">
+          <div class="team-cta__content">
+            <div>
+              <h2>一緒に卓球を楽しもう！</h2>
+              <p>大会に参加して、仲間と最高のプレーを。</p>
+            </div>
+            <a href="./team.html">チームを探す <span>→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sns">
+      <h2 data-en="SNS">SNS</h2>
+      <div class="sns-links">
+      <a href="#">Instagram</a>
+      <a href="#">X</a>
+      <a href="#">YouTube</a>
+      <a href="#">LINE</a>
+      </div>
+      </section>
+  </main>
+
+
+
+  <footer class="site-footer">
+    <p>© TAKYUTTO</p>
+  </footer>
+
+  <button class="page-top" id="pageTop" type="button" aria-label="ページ上部へ戻る">↑</button>
+  <script src="../js/script.js" defer></script>
+  <script src="../js/match.js" defer></script>
+</body>
+</html>
