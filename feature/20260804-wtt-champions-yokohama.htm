@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQB91W7233"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-JQB91W7233');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WTTチャンピオンズ横浜2026の大会概要、日本代表選手、見どころ、ランキングポイントを紹介します。">
+  <meta name="author" content="たきゅっこ暮らし">
+  <link rel="canonical" href="https://takyukko.web.app/feature/20260804-wtt-champions-yokohama.htm">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <title>たきゅっこ暮らし｜WTTチャンピオンズ横浜2026 シングルス世界No.1決定戦</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/LP.css">
+  </head>
+
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="logo">
+      <span class="logo-title">たきゅっこ暮らし</span>
+      <span class="logo-sub">〜 勝っても負けても、卓球好き 〜</span>
+    </a>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="fullscreen-menu" id="fullscreenMenu">
+    <ul>
+      <li><a href="#">TEAM<small>チームについて</small></a></li>
+      <li><a href="#">試合情報</a></li>
+      <li><a href="movie.html">動画</a></li>
+      <li><a href="#">イベント</a></li>
+      <li><a href="#">SNS</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <main class="rubber-lp champions-column">
+
+    <style>
+      .champions-column {
+        --wtt-purple: #6f2cff;
+        --wtt-navy: #151124;
+        --wtt-soft: #f6f3ff;
+      }
+
+      .champions-hero {
+        min-height: 72svh;
+        padding: 110px 24px 64px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        background:
+          radial-gradient(circle at 15% 20%, rgba(193, 87, 255, .55), transparent 32%),
+          radial-gradient(circle at 85% 75%, rgba(67, 139, 255, .38), transparent 35%),
+          linear-gradient(135deg, #0f0d19 0%, #221347 58%, #48217d 100%);
+      }
+
+      .champions-hero::before,
+      .champions-hero::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(255,255,255,.16);
+        border-radius: 50%;
+      }
+
+      .champions-hero::before {
+        width: 420px;
+        height: 420px;
+        top: -170px;
+        right: -100px;
+      }
+
+      .champions-hero::after {
+        width: 280px;
+        height: 280px;
+        left: -90px;
+        bottom: -120px;
+      }
+
+      .champions-hero__inner {
+        width: min(920px, 100%);
+        position: relative;
+        z-index: 1;
+      }
+
+      .champions-hero__eyebrow {
+        margin: 0 0 14px;
+        font-size: clamp(12px, 2vw, 16px);
+        font-weight: 700;
+        letter-spacing: .2em;
+      }
+
+      .champions-hero h1 {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(38px, 8vw, 88px);
+        line-height: .98;
+        letter-spacing: -.04em;
+      }
+
+      .champions-hero h1 span {
+        display: block;
+        margin-top: 18px;
+        font-size: .43em;
+        line-height: 1.3;
+        letter-spacing: .01em;
+      }
+
+      .champions-hero__date {
+        display: inline-flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+        padding: 11px 16px;
+        border: 1px solid rgba(255,255,255,.35);
+        border-radius: 999px;
+        background: rgba(255,255,255,.1);
+        backdrop-filter: blur(10px);
+        font-weight: 700;
+      }
+
+      .champions-column .rubber-message {
+        max-width: 900px;
+      }
+
+      .tournament-summary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 36px 0 46px;
+      }
+
+      .tournament-summary div {
+        padding: 20px 14px;
+        border-radius: 18px;
+        background: var(--wtt-soft);
+        text-align: center;
+      }
+
+      .tournament-summary strong,
+      .tournament-summary span {
+        display: block;
+      }
+
+      .tournament-summary strong {
+        font-size: clamp(22px, 4vw, 34px);
+      }
+
+      .tournament-summary span {
+        margin-top: 4px;
+        font-size: 13px;
+      }
+
+      .player-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 22px 0 42px;
+      }
+
+      .player-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-height: 108px;
+        padding: 18px;
+        border: 1px solid #eee9f8;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(27, 16, 58, .07);
+      }
+
+      .player-card__number {
+        flex: 0 0 58px;
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: #fff;
+        background: linear-gradient(135deg, #9b4cff, #5624c8);
+        font-weight: 800;
+      }
+
+      .player-card__name {
+        margin: 0;
+        font-size: 19px;
+        font-weight: 800;
+      }
+
+      .player-card__rank {
+        margin: 4px 0 0;
+        color: #685f72;
+        font-size: 14px;
+      }
+
+      .movie-block {
+        margin: 34px 0 46px;
+      }
+
+      .movie-block__frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 20px;
+        background: #111;
+        box-shadow: 0 18px 46px rgba(20, 12, 40, .18);
+      }
+
+      .movie-block__frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .movie-block h4 {
+        margin: 14px 0 0;
+        font-size: 18px;
+      }
+
+      .movie-block p {
+        margin-top: 7px;
+        color: #625b68;
+        font-size: 14px;
+      }
+
+      .champions-column blockquote {
+        border-left-color: var(--wtt-purple);
+        background: var(--wtt-soft);
+      }
+
+      .points-note {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #6d6670;
+      }
+
+      .official-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 34px 0;
+      }
+
+      .official-links a {
+        display: grid;
+        place-items: center;
+        min-height: 58px;
+        padding: 12px;
+        border-radius: 999px;
+        color: #fff;
+        background: var(--wtt-navy);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      @media (max-width: 680px) {
+        .champions-hero {
+          min-height: 64svh;
+          padding: 96px 20px 48px;
+        }
+
+        .tournament-summary {
+          grid-template-columns: 1fr;
+        }
+
+        .player-grid,
+        .official-links {
+          grid-template-columns: 1fr;
+        }
+
+        .player-card {
+          min-height: 96px;
+        }
+      }
+    </style>
+
+    <section class="champions-hero">
+      <div class="champions-hero__inner">
+        <p class="champions-hero__eyebrow">WTT CHAMPIONS YOKOHAMA 2026</p>
+        <h1>
+          横浜から、世界一へ。
+          <span>シングルス世界No.1決定戦が開幕！</span>
+        </h1>
+        <p class="champions-hero__date">
+          <span>2026.08.04–08.09</span>
+          <span>YOKOHAMA BUNTAI</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rubber-message">
+
+      <h1>WTTチャンピオンズ横浜2026<br>シングルス世界No.1決定戦が横浜で開幕！</h1>
+
+      <div class="article-meta">
+        <span>最終更新日</span>
+        <time datetime="2026-08-04">2026.08.04</time>
+      </div>
+
+      <p class="step">世界トップ32名が、横浜に集結。</p>
+
+      <p>
+        8月4日から9日まで、横浜BUNTAIで
+        <strong>「WTTチャンピオンズ横浜2026」</strong>が開催されます。
+      </p>
+
+      <p>
+        WTTチャンピオンズは、世界ランキング上位30名に加え、
+        開催国推薦1名・WTT推薦1名を加えた
+        <span class="highlight">男女各32名のみが出場できるエリート大会</span>です。
+      </p>
+
+      <p>
+        予選はなく、初戦から世界トップ選手同士が激突します。
+        毎試合が決勝戦級のカードになることも珍しくありません。
+      </p>
+
+      <blockquote>
+        <p>
+          「WTTチャンピオンズ」は、日本国内では毎年1回のペースで開催される、
+          世界最高峰のシングルストーナメントです。
+        </p>
+      </blockquote>
+
+      <div class="tournament-summary">
+        <div><strong>32名</strong><span>男女それぞれの出場人数</span></div>
+        <div><strong>6日間</strong><span>8月4日〜9日</span></div>
+        <div><strong>1,000pt</strong><span>優勝者の獲得ポイント</span></div>
+      </div>
+
+      <h3>日本男子出場選手</h3>
+      <p>世界ランキング上位組と開催国推薦組を合わせ、日本から5選手が出場します。</p>
+
+      <div class="player-grid" aria-label="日本男子出場選手一覧">
+        <article class="player-card">
+          <div class="player-card__number">WR3</div>
+          <div><p class="player-card__name">松島輝空</p><p class="player-card__rank">世界ランキング3位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">WR5</div>
+          <div><p class="player-card__name">張本智和</p><p class="player-card__rank">世界ランキング5位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">WR14</div>
+          <div><p class="player-card__name">戸上隼輔</p><p class="player-card__rank">世界ランキング14位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">HOST</div>
+          <div><p class="player-card__name">篠塚大登</p><p class="player-card__rank">開催国推薦</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">HOST</div>
+          <div><p class="player-card__name">宇田幸矢</p><p class="player-card__rank">開催国推薦</p></div>
+        </article>
+      </div>
+
+      <div class="movie-block">
+        <div class="movie-block__frame">
+
+        </div>
+        <h4>男子の戦いを動画でチェック</h4>
+        <p>大会をより楽しむために、注目選手やこれまでの熱戦を映像でも確認しておきましょう。</p>
+      </div>
+
+      <h3>日本女子出場選手</h3>
+      <p>女子も世界ランキング上位選手を中心に、日本から5選手が出場します。</p>
+
+      <div class="player-grid" aria-label="日本女子出場選手一覧">
+        <article class="player-card">
+          <div class="player-card__number">WR3</div>
+          <div><p class="player-card__name">張本美和</p><p class="player-card__rank">世界ランキング3位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">WR7</div>
+          <div><p class="player-card__name">早田ひな</p><p class="player-card__rank">世界ランキング7位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">WR11</div>
+          <div><p class="player-card__name">大藤沙月</p><p class="player-card__rank">世界ランキング11位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">WR13</div>
+          <div><p class="player-card__name">橋本帆乃香</p><p class="player-card__rank">世界ランキング13位</p></div>
+        </article>
+        <article class="player-card">
+          <div class="player-card__number">HOST</div>
+          <div><p class="player-card__name">長﨑美柚</p><p class="player-card__rank">開催国推薦</p></div>
+        </article>
+      </div>
+
+      <div class="movie-block">
+        <div class="movie-block__frame">
+          <iframe
+            src="https://www.youtube.com/embed/jIJW7OHNLSk"
+            title="WTTチャンピオンズ横浜2026 関連動画3"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <h4>女子の注目カードを映像で予習</h4>
+        <p>日本勢と中国勢を中心に、世界トップ選手のプレーにも注目です。</p>
+      </div>
+
+      <h3>今大会の見どころ</h3>
+
+      <p>
+        男子は、USスマッシュ優勝で勢いに乗る
+        <strong>松島輝空</strong>、前回横浜大会王者の
+        <strong>張本智和</strong>を中心に、日本勢が優勝争いへ挑みます。
+      </p>
+
+      <p>
+        一方で、フェリックス・ルブラン、林昀儒（リン・ユンジュ）、
+        邱党（チウ・ダン）など世界の強豪も集結し、
+        ハイレベルな戦いが予想されます。
+      </p>
+
+      <p>
+        女子では、張本美和、早田ひな、大藤沙月ら日本勢に加え、
+        中国の蒯曼（クアイ・マン）、陳幸同（チェン・シントン）、
+        王芸迪（ワン・イーディ）ら世界トップクラスが顔をそろえます。
+      </p>
+
+      <div class="movie-block">
+        <div class="movie-block__frame">
+          <iframe
+          src="https://www.youtube.com/embed/Q8oAWixlMXU"
+          title="WTTチャンピオンズ横浜2026 関連動画2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+
+        </div>
+        <h4>世界トップ選手の熱戦をもう一度</h4>
+        <p>スピード、回転、駆け引き。チャンピオンズならではの試合レベルを映像で体感できます。</p>
+      </div>
+
+      <h3>優勝すると1,000ポイント獲得</h3>
+
+      <p>
+        WTTチャンピオンズは、世界ランキングに大きく影響する大会でもあります。
+      </p>
+
+      <div class="article-table-wrap">
+        <table class="article-table">
+          <thead>
+            <tr><th>順位</th><th>獲得ポイント</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>優勝</td><td><strong>1,000pt</strong></td></tr>
+            <tr><td>準優勝</td><td>700pt</td></tr>
+            <tr><td>ベスト4</td><td>350pt</td></tr>
+            <tr><td>ベスト8</td><td>175pt</td></tr>
+            <tr><td>ベスト16</td><td>90pt</td></tr>
+            <tr><td>ベスト32</td><td>15pt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        優勝すると一気に<strong>1,000ポイント</strong>を獲得できるため、
+        世界ランキング上位争いを左右する重要な大会です。
+      </p>
+
+      <p>
+        特に2026年からはランキング制度が見直され、
+        ベスト8・ベスト4へ安定して勝ち進む選手が評価されやすい仕組みになっています。
+      </p>
+
+      <div class="article-link">
+        <a href="20260801wtt-ranking.htm">
+          WTT2026 世界ランキングポイントの仕組みを見る
+        </a>
+      </div>
+
+      <h3>まとめ</h3>
+
+      <p>
+        世界トップ32名だけが集まるWTTチャンピオンズは、
+        まさに<span class="highlight">シングルス世界No.1決定戦</span>です。
+      </p>
+
+      <p>
+        日本勢は男女とも5選手が出場し、横浜の舞台で世界一を目指します。
+      </p>
+
+      <p>
+        世界ランキング争いにも直結する大会だけに、試合結果だけでなく、
+        獲得ポイントやランキングの変動にも注目しながら観戦すると、
+        より一層楽しめるでしょう。
+      </p>
+
+      <div class="official-links">
+        <a href="https://www.worldtabletennis.com/eventInfo?selectedTab=Player%20List&eventId=3245" target="_blank" rel="noopener noreferrer">公式出場選手一覧を見る</a>
+        <a href="https://www.worldtabletennis.com/eventInfo?selectedTab=Draws&eventId=3245" target="_blank" rel="noopener noreferrer">公式ドローを見る</a>
+      </div>
+
+      <p class="ending">“The best meet the best.”</p>
+
+    </section>
+
+
+
+    <section class="feature-section">
+
+      <h2>FEATURE</h2>
+    
+      <div class="feature-grid">
+    
+        <article class="feature-item">
+          <a href="20260721takukichi.htm">
+            <img
+              src="images/20260721takukichi.jpg"
+              alt="ニッチな市場で390万人のファンを集めたニッチなビジネスモデル"
+            >
+    
+            <p class="feature-category">feature</p>
+    
+            <h3>
+              ニッチな市場で390万人のファンを集めた<br>ニッチなビジネスモデル
+            </h3>
+          </a>
+        </article>
+        <article class="feature-item">
+          <a href="20260722p4match.htm">
+            <img
+              src="images/20260722p4match.jpg"
+              alt="卓球の実力を数値化する「p4match」とは？"
+            >
+    
+            <p class="feature-category">feature</p>
+            <h3>卓球の実力を数値化する「p4match」とは？
+            </h3>
+              
+          </a>
+        </article>
+        <article class="feature-item">
+          <a href="20260723nanoblock.htm">
+            <img
+              src="images/20260723nanoblock.jpg"
+              alt="バタフライから、まさかの面白アイテム登場！"
+            >
+    
+            <p class="feature-category">ITEM</p>
+    
+            <h3>
+              バタフライから、まさかの面白アイテム登場！
+            </h3>
+          </a>
+        </article>
+        <article class="feature-item">
+          <a href="#">
+            <img
+              src="images/feature01.jpg"
+              alt="記事タイトル"
+            >
+    
+            <p class="feature-category">item</p>
+    
+            <h3>
+              マニア必見！卓球ナノブロック
+            </h3>
+          </a>
+        </article>
+        </div>
+      </section>
+
+  <section class="sns">
+    <h2 data-en="SNS">SNS</h2>
+    <div class="sns-links">
+      <a href="#">Instagram</a>
+      <a href="#">X</a>
+      <a href="#">YouTube</a>
+      <a href="#">LINE</a>
+    </div>
+  </section>
+
+</main>
+
+  <footer>© たきゅっこ暮らし</footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/performance.js"></script>
+  <script src="../js/LP.js"></script>
+
+</body>
+
+</html>

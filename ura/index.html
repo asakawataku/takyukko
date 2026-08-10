@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="裏・たきゅっこ暮らし。"
+  >
+
+  <title>裏・たきゅっこ暮らし</title>
+
+  <style>
+    /* ========================================
+       RESET
+    ======================================== */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family:
+        Arial,
+        "Helvetica Neue",
+        sans-serif;
+
+      color: #1c1c1c;
+      background: #f7f7f5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ========================================
+       PAGE
+    ======================================== */
+
+    .ura-page {
+      position: relative;
+
+      min-height: 100svh;
+
+      display: flex;
+      flex-direction: column;
+
+      padding:
+        22px
+        clamp(18px, 4vw, 48px)
+        28px;
+    }
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    .ura-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      min-height: 58px;
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .ura-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ura-logo__mark {
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #1c1c1c;
+  border-radius: 50%;
+
+  font-family: serif;
+  font-size: 16px;
+  line-height: 1;
+
+  animation: uraSpin 8s linear infinite;
+}
+
+@keyframes uraSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    .ura-logo__text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .ura-logo__text strong {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .ura-logo__text small {
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      color: #999;
+    }
+
+    .ura-header__hint {
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      color: #aaa;
+    }
+
+    /* ========================================
+       MAIN
+    ======================================== */
+
+    .ura-main {
+      width: min(100%, 920px);
+      margin: auto;
+
+      padding:
+        clamp(56px, 9vw, 110px)
+        0
+        clamp(60px, 8vw, 90px);
+    }
+
+    .ura-intro {
+      margin-bottom: 38px;
+    }
+
+    .ura-intro__label {
+      margin: 0 0 14px;
+
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      color: #aaa;
+    }
+
+    .ura-intro h1 {
+      margin: 0;
+
+      font-family:
+        "Times New Roman",
+        YuMincho,
+        "Yu Mincho",
+        serif;
+
+      font-size: clamp(30px, 5vw, 56px);
+      font-weight: 400;
+      line-height: 1.45;
+      letter-spacing: 0.04em;
+    }
+
+    /* ========================================
+       VIDEO
+    ======================================== */
+
+    .ura-video {
+      position: relative;
+
+      overflow: hidden;
+
+      aspect-ratio: 16 / 9;
+
+      background: #111;
+
+      border-radius: 3px;
+
+      box-shadow:
+        0 26px 70px rgba(0, 0, 0, 0.11);
+    }
+
+    .ura-video iframe {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      border: 0;
+    }
+
+    .ura-video-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      margin-top: 16px;
+    }
+
+    .ura-video-meta p {
+      margin: 0;
+
+      font-size: 10px;
+      line-height: 1.8;
+      letter-spacing: 0.1em;
+      color: #929292;
+    }
+
+    .ura-video-meta__number {
+      flex-shrink: 0;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    .ura-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .ura-footer small {
+      font-size: 8px;
+      letter-spacing: 0.14em;
+      color: #aaa;
+    }
+
+    .ura-back {
+      position: relative;
+
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      color: #999;
+
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .ura-back::before {
+      content: "←";
+      margin-right: 7px;
+    }
+
+    .ura-back:hover {
+      color: #1c1c1c;
+      transform: translateX(-3px);
+    }
+
+    /* ========================================
+       SMALL SECRET DETAIL
+    ======================================== */
+
+    .secret-dot {
+      position: fixed;
+      right: 18px;
+      bottom: 16px;
+
+      width: 5px;
+      height: 5px;
+
+      border-radius: 50%;
+
+      background: #dc4038;
+      opacity: 0.55;
+    }
+
+    /* ========================================
+       SMARTPHONE
+    ======================================== */
+
+    @media (max-width: 600px) {
+
+      .ura-page {
+        padding:
+          14px
+          16px
+          20px;
+      }
+
+      .ura-header {
+        min-height: 52px;
+      }
+
+      .ura-logo__mark {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+      }
+
+      .ura-logo__text strong {
+        font-size: 11px;
+      }
+
+      .ura-header__hint {
+        display: none;
+      }
+
+      .ura-main {
+        padding:
+          72px
+          0
+          80px;
+      }
+
+      .ura-intro {
+        margin-bottom: 28px;
+      }
+
+      .ura-intro h1 {
+        font-size: clamp(27px, 9vw, 38px);
+      }
+
+      .ura-video {
+        border-radius: 2px;
+      }
+
+      .ura-video-meta {
+        display: block;
+      }
+
+      .ura-video-meta__number {
+        margin-top: 6px !important;
+      }
+    }
+
+    /* ========================================
+       REDUCED MOTION
+    ======================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .ura-back {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ura-page">
+
+    <header class="ura-header">
+
+      <a
+        href="../index.html"
+        class="ura-logo"
+        aria-label="たきゅっこ暮らしへ戻る"
+      >
+
+      <span class="ura-logo__mark">
+        裏
+      </span>
+
+        <span class="ura-logo__text">
+          <strong>TAKYUKKO</strong>
+          <small>SECRET ROOM</small>
+        </span>
+
+      </a>
+
+      <span class="ura-header__hint">
+        FOUND BY CHANCE
+      </span>
+
+    </header>
+
+
+    <main class="ura-main">
+
+      <section class="ura-intro">
+
+        <p class="ura-intro__label">
+          TODAY'S SELECTION
+        </p>
+
+        <h1>
+          Thanks you!
+        </h1>
+
+      </section>
+
+
+      <section aria-label="今日のおすすめ音楽">
+
+        <div class="ura-video">
+
+          <iframe
+            src="https://www.youtube.com/embed/f3hvoQtuH1o?si=LgceZodf6_--Td62"
+            title="裏・たきゅっこ暮らし 今日の一曲"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+        </div>
+
+        <div class="ura-video-meta">
+
+          <p>
+            あざす！<br />
+            なかなかうまくいかずで〜、ボチボチ生きてます。<br />
+            卓球と飲み会画策中。
+          </p>
+
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="ura-footer">
+
+      <small>
+        © 裏・たきゅっこ暮らし
+      </small>
+
+      <a
+        href="../index.html"
+        class="ura-back"
+      >
+        表へ戻る
+      </a>
+
+    </footer>
+
+    <span
+      class="secret-dot"
+      aria-hidden="true"
+    ></span>
+
+  </div>
+
+</body>
+</html>

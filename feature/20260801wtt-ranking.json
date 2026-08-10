@@ -1,0 +1,90 @@
+{
+  "slug": "20260801wtt-ranking",
+  "title": "WTT2026 世界ランキングポイントの仕組みを徹底解説",
+  "subtitle": "勝つだけではランキングは上がらない？",
+  "category": "feature",
+  "publishedAt": "2026-08-01",
+  "source": "ITTF Table Tennis World Ranking Regulations",
+  "pointTable": [
+    {
+      "event": "オリンピック",
+      "champion": 2000,
+      "runnerUp": 1400,
+      "semiFinal": 700,
+      "quarterFinal": 350,
+      "roundOf16": 175
+    },
+    {
+      "event": "世界卓球",
+      "champion": 2000,
+      "runnerUp": 1400,
+      "semiFinal": 700,
+      "quarterFinal": 350,
+      "roundOf16": 175
+    },
+    {
+      "event": "WTT Grand Smash",
+      "champion": 2000,
+      "runnerUp": 1400,
+      "semiFinal": 900,
+      "quarterFinal": 580,
+      "roundOf16": 380
+    },
+    {
+      "event": "ITTFワールドカップ",
+      "champion": 1500,
+      "runnerUp": 1050,
+      "semiFinal": 680,
+      "quarterFinal": 450,
+      "roundOf16": 300
+    },
+    {
+      "event": "WTT Finals",
+      "champion": 1500,
+      "runnerUp": 1050,
+      "semiFinal": null,
+      "quarterFinal": null,
+      "roundOf16": null
+    },
+    {
+      "event": "WTT Champions",
+      "champion": 1000,
+      "runnerUp": 700,
+      "semiFinal": 450,
+      "quarterFinal": 300,
+      "roundOf16": 80
+    },
+    {
+      "event": "WTT Star Contender",
+      "champion": 600,
+      "runnerUp": 420,
+      "semiFinal": 270,
+      "quarterFinal": 175,
+      "roundOf16": 115
+    },
+    {
+      "event": "WTT Contender",
+      "champion": 400,
+      "runnerUp": 280,
+      "semiFinal": 180,
+      "quarterFinal": 120,
+      "roundOf16": 30
+    },
+    {
+      "event": "大陸選手権",
+      "champion": 500,
+      "runnerUp": 350,
+      "semiFinal": 175,
+      "quarterFinal": 90,
+      "roundOf16": 45
+    },
+    {
+      "event": "WTT Feeder",
+      "champion": 125,
+      "runnerUp": 90,
+      "semiFinal": 60,
+      "quarterFinal": 40,
+      "roundOf16": 25
+    }
+  ]
+}

@@ -13,13 +13,14 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description"
-content="勝っても負けても卓球好き。大会情報・動画・プレイコラムなど、卓球の魅力を発信する『たきゅっこ暮らし』。初心者から上級者まで、とけないピンポンマジックを。">
+content="勝っても負けても卓球好き。大会情報・動画・コラムなど、卓球の魅力を発信する『たきゅっこ暮らし』。初心者から上級者まで、とけないピンポンマジックを。">
 <meta name="author" content="たきゅっこ暮らし">
 <link rel="canonical" href="https://takyukko.web.app/">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <title>たきゅっこ暮らし｜勝っても負けても卓球好き</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style_rubber-feature.css">
 </head>
 <body>
 
@@ -37,20 +38,20 @@ content="勝っても負けても卓球好き。大会情報・動画・プレ�
 
 <nav class="fullscreen-menu" id="fullscreenMenu">
 <ul>
-<li><a href="#">TEAM<small>チームについて</small></a></li>
+<li><a href="now-planning.htm">TEAM<small>チームについて</small></a></li>
 <li><a href="match/match.html">試合情報</a></li>
-<li><a href="movie.html">動画</a></li>
-<li><a href="#">イベント</a></li>
-<li><a href="#">SNS</a></li>
-<li><a href="#">お問い合わせ</a></li>
+<li><a href="rubber/shop.html">ラバーを探す</a></li>
+<li><a href="now-planning.htm">イベント</a></li>
+<li><a href="feature/index.html">コラム</a></li>
+<li><a href="now-planning.htm">お問い合わせ</a></li>
 </ul>
 </nav>
 
 <section class="hero">
 <div class="hero-slider">
-<div class="slide active"><img src="images/hero01.jpg"></div>
+<div class="slide active"><a href="feature/index.html"><img src="images/hero07.jpg"></a></div>
+<div class="slide"><img src="images/hero01.jpg"></div>
 <div class="slide"><a href="https://p4match.com/index.php"><img src="images/hero02.jpg"></a></div>
-<div class="slide"><img src="images/hero03.jpg"></div>
 <div class="slide"><a href="https://a.r10.to/hkrSdX"><img src="images/hero04.jpg"></a></div>
 <div class="slide"><a href="https://www.youtube.com/watch?v=SuEVVsaPgVA"><img src="images/hero05.jpg"></a></div>
 </div>
@@ -65,63 +66,103 @@ content="勝っても負けても卓球好き。大会情報・動画・プレ�
 </div>
 </section>
 
+<section class="rubber-feature" aria-label="ラバー特集">
+  <div class="rubber-feature__bg" aria-hidden="true"></div>
+
+  <div class="rubber-feature__marquee" aria-hidden="true">
+    <div class="rubber-feature__marquee-track">
+      <span>ZYRE-03· vs· GLAZER·</span>
+      <span>ZYRE-03· vs· GLAZER·</span>
+    </div>
+  </div>
+
+  <div class="rubber-feature__product">
+    <img
+      src="images/rubber-glayzer.png"
+      alt="グレイザー ラバー紹介"
+      class="rubber-feature__rubber"
+    >
+  </div>
+
+  <a
+    href="https://takyukko.web.app/feature/zyre03-glayzer.htm"
+    class="rubber-feature__btn"
+  >
+    MORE VIEW
+    <span aria-hidden="true">→</span>
+  </a>
+</section>
+
+<!--
+  旧バナー：あとで再利用できるように保存
 <section class="banner">
   <div class="banner-content">
     <h1>憧れは捨てよ、原点へ</h1>
-    <p>ハイエンドの性能でコスパ最強、初中級者おすすめの逸品</p>
-    <a href="https://takyukko.web.app/LP/zyre03-glayzer.htm" class="btn">ラバー比較はこちら</a>
+    <p>ハイエンドの性能でコスパ最強</p>
+    <a href="https://takyukko.web.app/feature/zyre03-glayzer.htm" class="btn">ラバー比較はこちら</a>
   </div>
 </section>
+-->
 
 <div class="menu-message">
   <div class="menu-message__text">
       <p>
           卓球を始めて計10年。<br>
           勝てないし、最近用具高くない？<br>
-          腕も痛いし…。でも、楽しいよね。(2026/07/17更新)
+          腕も痛いし…。通院中(2026/8/8 サイト工事中)
       </p>
       <span>— 運営担当</span>
   </div>
+  <div class="menu-message__character-wrap">
+    <a href="/ura/" class="menu-message__character-link">
   <img
       src="images/character.png"
-      alt="たきゅっこ"
-      class="menu-message__character">
-</div>
+      alt="たきゅっこ 卓ニキ運営担当"
+      class="menu-message__character"></a>
+</div></div>
+
 
 
 <section class="menu-section">
 <h2 data-en="MENU">MENU</h2>
 <div class="menu-grid">
-<a href="#" class="menu-card"><img src="images/menu01.jpg"><div class="menu-content"><h3>TEAM</h3><p>チーム紹介はこちら</p></div></a>
-<a href="#" class="menu-card"><img src="images/menu02.jpg"><div class="menu-content"><h3>NEWS</h3><p>最新情報はこちら</p></div></a>
-<a href="#" class="menu-card"><img src="images/menu03.jpg"><div class="menu-content"><h3>MOVIE</h3><p>おすすめ動画コンテンツ</p></div></a>
+<a href="now-planning.htm" class="menu-card"><img src="images/menu01.jpg"><div class="menu-content"><h3>TEAM</h3><p>チーム紹介はこちら</p></div></a>
+<a href="news/index.html" class="menu-card"><img src="images/menu02.jpg"><div class="menu-content"><h3>NEWS</h3><p>最新ニュース速報</p></div></a>
+<a href="now-planning.htm" class="menu-card"><img src="images/menu03.jpg"><div class="menu-content"><h3>MOVIE</h3><p>おすすめ動画コンテンツ</p></div></a>
 <a href="match/match.html" class="menu-card"><img src="images/menu04.jpg" alt="千葉・東京・その他大会情報"><div class="menu-content"><h3>MATCH</h3><p>千葉・東京など試合情報</p></div></a>
-<a href="#" class="menu-card"><img src="images/menu05.jpg"><div class="menu-content"><h3>EVENT</h3><p>チーム練習・イベント情報</p></div></a>
-<a href="#" class="menu-card"><img src="images/menu06.jpg"><div class="menu-content"><h3>ADVISER</h3><p>特別に上手くなりたい方へ</p></div></a>
+<a href="now-planning.htm" class="menu-card"><img src="images/menu05.jpg"><div class="menu-content"><h3>EVENT</h3><p>チーム練習・イベント情報</p></div></a>
+<a href="now-planning.htm" class="menu-card"><img src="images/menu06.jpg"><div class="menu-content"><h3>ADVISER</h3><p>特別に上手くなりたい方へ</p></div></a>
+<a href="feature/index.html" class="menu-card"><img src="images/menu07.jpg"><div class="menu-content"><h3>COLUMNS</h3><p>たきゅっこコラム「今日もネットイン日和」</p></div></a>
+<a href="rubber/shop.html" class="menu-card"><img src="images/menu08.jpg"><div class="menu-content"><h3>SHOPPING</h3><p>ラバー最安の殿堂「たきゅポチ」</p></div></a>
 </div>
 </section>
 
 <section class="news">
   <h2 data-en="NEWS">お知らせ</h2>
-  <article><span class="date">2026.06.21</span><h3>ホームページをリニューアルしました</h3></article>
-  <article><span class="date">2026.06.15</span><h3>試合結果を掲載しました</h3></article>
+
+  <a href="feature/index.html">
+    <article>
+      <span class="date">2026.08.08</span>
+      <h3>トップページ動画エリア、松平健太vs.丹羽孝希　夢の対決。更新</h3>
+    </article>
+  </a>
+
 </section>
 
 <section class="youtube">
   <h2 data-en="MOVIE">動画</h2>
-  <a href="https://www.youtube.com/watch?v=ViSLNF2pRU0"
+  <a href="https://www.youtube.com/watch?v=HaExNW6yT0g"
   target="_blank"
   class="youtube-card">
 
- <img src="https://img.youtube.com/vi/ViSLNF2pRU0/maxresdefault.jpg"
+ <img src="https://img.youtube.com/vi/HaExNW6yT0g/maxresdefault.jpg"
       alt="YouTube動画">
  <div class="play-button">▶</div>
 </a>
 <div class="youtube-info">
-<h3>卓キチvs.じんたく　世界一のサーブ</h3>
-<p>数年前のプレイ動画ですが、今見ても本当に面白い一戦です。アマチュアとプロの差を肌で感じられる内容で、
-  神拓也さんのサーブからの3球目攻撃はとても参考になります。3セット目は気迫あふれるラリーが続き、
-  見応え抜群！プレーだけでなく、人柄の良さも伝わってくるおすすめの一本です。</p>
+<h3>必見！松平健太vs. 丹羽孝希　76回 全日本実業団卓球選手権大会(7/31)</h3>
+<p>2026年7月30日（木）〜8月2日（日）にセーレン・ドリームアリーナで行われた「第76回全日本実業団卓球選手権大会」。<br />
+夢の超注目カード。2人の唯一無二のテクニックがぶつかり合う。最高世界ランク5位の丹羽のコキニワカットブロック×最高世界ランキング9位の松平のライジングバックドライブは見応えあり。</p>
 </div>
 <button type="button" class="more-btn" id="movieMoreBtn">
   MORE VIEW
@@ -155,7 +196,9 @@ content="勝っても負けても卓球好き。大会情報・動画・プレ�
   
       <div class="about-text">
           <h3>卓球が、もっと好きになる。</h3>
-          <p>たきゅっこ暮らしは、卓球を通じて人と人をつなげるコミュニティサイトです。アマチュアだからこそ感じる楽しさや悩み、練習内容や技術などを、コミカルに発信しています。卓球がもっと好きになり、少しでも上達するきっかけになればと陰ながら応援します。</p>
+          <p>たきゅっこ暮らしは、卓球を通じて人と人をつなげるコミュニティサイトです。
+            アマチュアだからこそ感じる楽しさや悩み、練習内容や技術などを、コミカルに発信しています。
+            卓球がもっと好きになり、少しでも上達するきっかけになればいいなと思ってます。</p>
       </div>
     </section>
       <!--
@@ -180,5 +223,6 @@ content="勝っても負けても卓球好き。大会情報・動画・プレ�
 
 <script src="js/script.js"></script>
 </script>
+<div class="flying-ball" aria-hidden="true"></div>
 </body>
 </html>

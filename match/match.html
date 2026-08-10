@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JQB91W7233"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JQB91W7233"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -12,243 +13,276 @@
 
   gtag('config', 'G-JQB91W7233');
 </script>
-  <meta name="description" content="千葉・東京を中心とした卓球大会スケジュール一覧です。">
-  <title>たきゅっこ暮らし｜勝っても負けても卓球好き</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/match.css">
-</head>
+<meta content="千葉・東京を中心とした卓球大会スケジュール一覧です。" name="description"/>
+<title>たきゅっこ暮らし｜勝っても負けても卓球好き</title>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/match.css" rel="stylesheet"/>
+<style id="large-ball-styles">
+/* ラージボール専用カラー */
+.match-tab--large {
+  --large-accent: #d56a35;
+}
+.match-tab--large.is-active {
+  background: var(--large-accent);
+  border-color: var(--large-accent);
+  color: #fff;
+}
+.match-card[data-area="large"]{
+  border-left:6px solid #f59e0b;
+  background:#f3f4f6;
+}
+
+.match-card[data-area="large"] .match-card__area{
+  color:#f59e0b;
+  font-weight:700;
+}
+
+.match-card[data-area="large"] h3,
+.match-card[data-area="large"] .match-card__meta,
+.match-card[data-area="large"] .match-info,
+.match-card[data-area="large"] .match-card__host{
+  color:#222;
+}
+</style></head>
 <body>
-  <header class="header">
-    <a href="../index.html" class="logo">
-      <span class="logo-title">たきゅっこ暮らし</span>
-      <span class="logo-sub">〜 勝っても負けても、卓球好き。〜</span>
-    </a>
-    <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
+<header class="header">
+<a class="logo" href="../index.html">
+<span class="logo-title">たきゅっこ暮らし</span>
+<span class="logo-sub">〜 勝っても負けても、卓球好き。〜</span>
+</a>
+<button class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</header>
+<nav class="fullscreen-menu" id="fullscreenMenu">
+<ul>
+<li><a href="#">TEAM<small>チームについて</small></a></li>
+<li><a href="#">試合情報</a></li>
+<li><a href="movie.html">動画</a></li>
+<li><a href="#">イベント</a></li>
+<li><a href="#">SNS</a></li>
+<li><a href="#">お問い合わせ</a></li>
+</ul>
+</nav>
+<main>
+<section class="match-hero">
+<img alt="卓球大会の試合会場" class="match-hero__image" src="images/match-hero.jpg"/>
+<div class="match-hero__overlay"></div>
+<div class="match-hero__content">
+<p class="match-hero__eyebrow">TABLE TENNIS TOURNAMENT</p>
+<h1><span>MATCH</span>SCHEDULE</h1>
+<p class="match-hero__lead">千葉・東京の卓球大会スケジュール</p>
+</div>
+<p class="match-hero__notice">最新の大会情報を<br/>随時更新しています</p>
+</section>
+<section aria-labelledby="match-list-title" class="match-section">
+<div class="match-container">
+<h2 class="visually-hidden" id="match-list-title">大会一覧</h2>
+<div aria-label="地域で絞り込み" class="match-tabs" role="tablist">
+<button aria-selected="true" class="match-tab is-active" data-filter="all" role="tab" type="button">ALL<small>すべて</small></button>
+<button aria-selected="false" class="match-tab" data-filter="chiba" role="tab" type="button">CHIBA<small>千葉県</small></button>
+<button aria-selected="false" class="match-tab" data-filter="tokyo" role="tab" type="button">TOKYO<small>東京都</small></button>
+<button aria-selected="false" class="match-tab" data-filter="other" role="tab" type="button">OTHER<small>その他の地域</small></button><button aria-selected="false" class="match-tab match-tab--large" data-filter="large" role="tab" type="button">LARGE<small>ラージボール</small></button>
+</div>
+<div class="match-list" id="matchList">
+<article class="match-card reveal" data-area="chiba">
+<time class="match-date" datetime="2026-08-02"><span>2026</span><strong>08.02</strong><b>SUN</b></time>
+<div class="match-card__body">
+<p class="match-card__area">CHIBA</p>
+<h3>第6回 市川オープン卓球大会（個人・団体）</h3>
+<div class="match-card__meta">
+<span>⌖ 市川市 塩浜市民体育館</span>
+<span>♙ 個人戦・団体戦</span>
+</div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>市川市で開催されるオープン大会。個人戦と団体戦が実施されます。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>個人・団体の両方が開催されるため、自分に合った種目を選びやすい大会です。中間ランクでも結構強めのイメージです。</p>
+<ul class="match-info__list"><li>申込締切：7月30日</li></ul>
+</div>
+<p class="match-card__host">情報元：nocha</p>
+<a class="match-card__link" href="https://nocha.jp/matches/75783" rel="noopener noreferrer" target="_blank">個人戦を見る <span>→</span></a>
+<a class="match-card__link" href="https://nocha.jp/matches/75784" rel="noopener noreferrer" target="_blank">団体戦を見る <span>→</span></a>
+</div>
+<div class="match-card__photo"><img alt="市川市 塩浜市民体育館" src="images/venue-chiba-port.jpg"/></div>
+</article>
 
-  <nav class="fullscreen-menu" id="fullscreenMenu">
-    <ul>
-    <li><a href="#">TEAM<small>チームについて</small></a></li>
-    <li><a href="#">試合情報</a></li>
-    <li><a href="movie.html">動画</a></li>
-    <li><a href="#">イベント</a></li>
-    <li><a href="#">SNS</a></li>
-    <li><a href="#">お問い合わせ</a></li>
-    </ul>
-  </nav>
+<article class="match-card reveal" data-area="chiba">
+<time class="match-date" datetime="2026-08-15"><span>2026</span><strong>08.15</strong><b>SAT</b></time>
+<div class="match-card__body">
+<p class="match-card__area">CHIBA</p>
+<h3>第30回 TTTD杯 男女混合シングルス</h3>
+<div class="match-card__meta">
+<span>⌖ 袖ケ浦市 臨海スポーツセンター</span>
+<span>♙ 男女混合シングルス</span>
+</div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>袖ケ浦市で開催される男女混合シングルス大会です。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>女性1割ほど、混合シングルス。学生も多く強い方も多いので楽しめます。リーグ戦3-4人の後、順位別トーナメントで優勝決めます。</p>
+<ul class="match-info__list"><li>申込締切：掲載元でご確認ください</li></ul>
+</div>
+<p class="match-card__host">情報元：nocha</p>
+<a class="match-card__link" href="https://nocha.jp/matches/74166" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
+</div>
+<div class="match-card__photo"><img alt="袖ケ浦市 臨海スポーツセンター" src="images/venue-sodegaura-rinkai.jpg"/></div>
+</article>
 
-  <main>
-    <section class="match-hero">
-      <img class="match-hero__image" src="images/match-hero.jpg" alt="卓球大会の試合会場">
-      <div class="match-hero__overlay"></div>
-      <div class="match-hero__content">
-        <p class="match-hero__eyebrow">TABLE TENNIS TOURNAMENT</p>
-        <h1><span>MATCH</span>SCHEDULE</h1>
-        <p class="match-hero__lead">千葉・東京の卓球大会スケジュール</p>
-      </div>
-      <p class="match-hero__notice">最新の大会情報を<br>随時更新しています</p>
-    </section>
+<article class="match-card reveal" data-area="chiba">
+<time class="match-date" datetime="2026-08-15"><span>2026</span><strong>08.15</strong><b>SAT</b></time>
+<div class="match-card__body">
+<p class="match-card__area">CHIBA</p>
+<h3>エブリーグ個人＆団体賞金付き卓球大会</h3>
+<div class="match-card__meta">
+<span>⌖ 船橋アリーナ</span>
+<span>♙ シングルス・ダブルス・団体戦</span>
+</div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>船橋アリーナで開催される賞金付き卓球大会。シングルス・ダブルス・団体戦が行われます。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>youtuberや強豪校など強者集う卓球大会です。</p>
+<ul class="match-info__list"><li>申込締切：8月12日</li></ul>
+</div>
+<p class="match-card__host">情報元：nocha</p>
+<a class="match-card__link" href="https://nocha.jp/matches/70668" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
+</div>
+<div class="match-card__photo"><img alt="船橋アリーナ" src="images/venue-hunabashi-arena.jpg"/></div>
+</article>
 
-    <section class="match-section" aria-labelledby="match-list-title">
-      <div class="match-container">
-        <h2 id="match-list-title" class="visually-hidden">大会一覧</h2>
+<article class="match-card reveal" data-area="chiba">
+<time class="match-date" datetime="2026-08-17"><span>2026</span><strong>08.17</strong><b>MON</b></time>
+<div class="match-card__body">
+<p class="match-card__area">CHIBA</p>
+<h3>第173回 バオダブ卓球会（硬球）</h3>
+<div class="match-card__meta">
+<span>⌖ 柏市 沼南体育館</span>
+<span>♙ 男女シングルス・ミックス・女子ダブルス</span>
+</div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>柏市で開催されるオープン大会。男女シングルス、ミックスダブルス、女子ダブルスが実施されます。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>7-8名のリーグ戦でたくさん楽しめてお得です。ベテランの強豪出現。</p>
+<ul class="match-info__list"><li>申込締切：掲載元でご確認ください</li></ul>
+</div>
+<p class="match-card__host">情報元：nocha</p>
+<a class="match-card__link" href="https://nocha.jp/matches/68490" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
+</div>
+<div class="match-card__photo"><img alt="柏市 沼南体育館" src="images/venue-kashiwa-numanan.jpg"/></div>
+</article>
 
-        <div class="match-tabs" role="tablist" aria-label="地域で絞り込み">
-          <button class="match-tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">ALL<small>すべて</small></button>
-          <button class="match-tab" type="button" data-filter="chiba" role="tab" aria-selected="false">CHIBA<small>千葉県</small></button>
-          <button class="match-tab" type="button" data-filter="tokyo" role="tab" aria-selected="false">TOKYO<small>東京都</small></button>
-          <button class="match-tab" type="button" data-filter="other" role="tab" aria-selected="false">OTHER<small>その他の地域</small></button>
-        </div>
+<article class="match-card reveal" data-area="chiba">
+<time class="match-date" datetime="2026-08-30"><span>2026</span><strong>08.30</strong><b>SUN</b></time>
+<div class="match-card__body">
+<p class="match-card__area">CHIBA</p>
+<h3>第28回 成田オープン卓球大会（団体戦）</h3>
+<div class="match-card__meta">
+<span>⌖ 重兵衛スポーツフィールド中台 成田市体育館</span>
+<span>♙ 団体戦</span>
+</div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>成田市で開催されるオープン団体戦です。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>千葉県で歴史のある大型の大会です。例年、千葉県の強豪クラブチームなど出場してます。</p>
+<ul class="match-info__list"><li>申込締切：8月4日</li></ul>
+</div>
+<p class="match-card__host">情報元：nocha</p>
+<a class="match-card__link" href="https://nocha.jp/matches/71856" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
+</div>
+<div class="match-card__photo"><img alt="重兵衛スポーツフィールド中台 成田市体育館" src="images/venue-sample.jpg"/></div>
+</article>
 
-        <div class="match-list" id="matchList">
-          <article class="match-card reveal" data-area="chiba">
-            <time class="match-date" datetime="2025-07-20"><span>2025</span><strong>07.20</strong><b>SUN</b></time>
-            <div class="match-card__body">
-              <p class="match-card__area">CHIBA</p>
-              <h3>千葉市オープン卓球大会</h3>
-              <div class="match-card__meta">
-                <span>⌖ 千葉ポートアリーナ</span>
-                <span>♙ 一般・年代別</span>
-              </div>
-              <div class="match-info">
-                <p class="match-info__title">大会の特徴</p>
-              
-                <ul class="match-info__list">
-                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
-                  <li>女性参加者が多め</li>
-                  <li>冷房あり</li>
-                </ul>
-              </div>
-              <p class="match-card__host">主催：千葉市卓球協会</p>
-              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
-            </div>
-            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="千葉ポートアリーナ"></div>
-          </article>
+<article class="match-card reveal" data-area="tokyo">
+<time class="match-date"><span>COMING</span><strong>SOON</strong><b>TOKYO</b></time>
+<div class="match-card__body">
+<p class="match-card__area">TOKYO</p>
+<span class="match-card__status">サンプル</span>
+<h3>東京都内のおすすめ大会</h3>
+<div class="match-card__meta"><span>⌖ 東京都内</span><span>♙ 掲載準備中</span></div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>東京都内で参加しやすいオープン大会を掲載予定です。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>開催日や申込期限を確認しながら、おすすめ大会を厳選して追加します。</p>
+</div>
+<p class="match-card__host">現在、情報を準備しています</p>
+</div>
+<div class="match-card__photo"><img alt="東京都内の卓球大会" src="images/venue-sample.jpg"/></div>
+</article>
 
-          <article class="match-card reveal" data-area="tokyo">
-            <time class="match-date" datetime="2025-07-27"><span>2025</span><strong>07.27</strong><b>SUN</b></time>
-            <div class="match-card__body">
-              <p class="match-card__area">TOKYO</p>
-              <h3>城東卓球選手権大会</h3>
-              <div class="match-card__meta">
-                <span>⌖ 江戸川区スポーツセンター</span>
-                <span>♙ シングルス</span>
-              </div>
-              <div class="match-info">
-                <p class="match-info__title">大会の特徴</p>
-              
-                <ul class="match-info__list">
-                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
-                  <li>女性参加者が多め</li>
-                  <li>冷房あり</li>
-                </ul>
-              </div>
-              <p class="match-card__host">主催：城東卓球連盟</p>
-              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
-            </div>
-            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="江戸川区スポーツセンター"></div>
-          </article>
-
-          <article class="match-card reveal" data-area="chiba">
-            <time class="match-date" datetime="2025-08-03"><span>2025</span><strong>08.03</strong><b>SUN</b></time>
-            <div class="match-card__body">
-              <p class="match-card__area">CHIBA</p>
-              <h3>習志野市民卓球大会</h3>
-              <div class="match-card__meta">
-                <span>⌖ 習志野市総合体育館</span>
-                <span>♙ 一般・学生</span>
-              </div>
-              <div class="match-info">
-                <p class="match-info__title">大会の特徴</p>
-              
-                <ul class="match-info__list">
-                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
-                  <li>女性参加者が多め</li>
-                  <li>冷房あり</li>
-                </ul>
-              </div>
-              <p class="match-card__host">主催：習志野市卓球協会</p>
-              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
-            </div>
-            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="習志野市総合体育館"></div>
-          </article>
-
-          <article class="match-card reveal" data-area="tokyo">
-            <time class="match-date" datetime="2025-08-17"><span>2025</span><strong>08.17</strong><b>SUN</b></time>
-            <div class="match-card__body">
-              <p class="match-card__area">TOKYO</p>
-              <h3>第38回 東京都オープン</h3>
-              <div class="match-card__meta">
-                <span>⌖ 駒沢オリンピック公園総合運動場体育館</span>
-                <span>♙ 一般・年代別</span>
-              </div>
-              <div class="match-info">
-                <p class="match-info__title">大会の特徴</p>
-              
-                <ul class="match-info__list">
-                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
-                  <li>女性参加者が多め</li>
-                  <li>冷房あり</li>
-                </ul>
-              </div>
-              <div class="match-level">
-                <p class="match-level__title">出没クラス</p>
-                <p class="match-level__text">
-                  関東大学リーグ3部レギュラー〜元全日本クラス
-                </p>
-              </div>
-              <p class="match-card__host">主催：東京都卓球連盟</p>
-              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
-            </div>
-            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="駒沢オリンピック公園総合運動場体育館"></div>
-          </article>
-
-          <article class="match-card reveal" data-area="other">
-            <time class="match-date" datetime="2025-08-24"><span>2025</span><strong>08.24</strong><b>SUN</b></time>
-            <div class="match-card__body">
-              <p class="match-card__area">OTHER</p>
-              <h3>関東オープン卓球交流大会</h3>
-              <div class="match-card__meta">
-                <span>⌖ 横浜武道館</span>
-                <span>♙ 団体戦</span>
-              </div>
-              <div class="match-info">
-                <p class="match-info__title">🏓 大会の特徴</p>
-              
-                <ul class="match-info__list">
-                  <li>関東大学リーグ3部レギュラー〜元全日本クラス</li>
-                  <li>女性参加者が多め</li>
-                  <li>冷房あり</li>
-                </ul>
-              </div>
-              <p class="match-card__host">主催：関東卓球交流会</p>
-              <a class="match-card__link" href="#">詳細を見る <span>→</span></a>
-            </div>
-            <div class="match-card__photo"><img src="images/venue-chiba-port.jpg" alt="横浜武道館"></div>
-          </article>
-        </div>
-
-        <p class="match-empty" id="matchEmpty" hidden>該当する大会情報はまだありません。</p>
-
-        <div class="match-info-grid reveal">
-          <section class="info-panel">
-            <div class="info-panel__icon" aria-hidden="true">▣</div>
-            <div>
-              <h3>大会情報の掲載について</h3>
-              <p>大会主催者の方で、情報掲載をご希望の方はお問い合わせフォームよりご連絡ください。</p>
-              <a href="./contact.html">お問い合わせはこちら <span>→</span></a>
-            </div>
-          </section>
-
-          <section class="area-panel">
-            <h3>エリアから探す</h3>
-            <div class="area-panel__layout">
-              <div class="area-panel__map" aria-hidden="true">JAPAN</div>
-              <div class="area-panel__links">
-                <button type="button" data-jump-filter="chiba">千葉県の大会を見る <span>→</span></button>
-                <button type="button" data-jump-filter="tokyo">東京都の大会を見る <span>→</span></button>
-                <button type="button" data-jump-filter="other">その他の地域を見る <span>→</span></button>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <aside class="team-cta reveal">
-          <img src="images/team-cta.jpg" alt="卓球ラケットとボール">
-          <div class="team-cta__content">
-            <div>
-              <h2>一緒に卓球を楽しもう！</h2>
-              <p>大会に参加して、仲間と最高のプレーを。</p>
-            </div>
-            <a href="./team.html">チームを探す <span>→</span></a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="sns">
-      <h2 data-en="SNS">SNS</h2>
-      <div class="sns-links">
-      <a href="#">Instagram</a>
-      <a href="#">X</a>
-      <a href="#">YouTube</a>
-      <a href="#">LINE</a>
-      </div>
-      </section>
-  </main>
-
-
-
-  <footer class="site-footer">
-    <p>© TAKYUTTO</p>
-  </footer>
-
-  <button class="page-top" id="pageTop" type="button" aria-label="ページ上部へ戻る">↑</button>
-  <script src="../js/script.js" defer></script>
-  <script src="../js/match.js" defer></script>
+<article class="match-card reveal" data-area="other">
+<time class="match-date"><span>COMING</span><strong>SOON</strong><b>OTHER</b></time>
+<div class="match-card__body">
+<p class="match-card__area">OTHER</p>
+<span class="match-card__status">サンプル</span>
+<h3>関東近郊のおすすめ大会</h3>
+<div class="match-card__meta"><span>⌖ 神奈川・埼玉ほか</span><span>♙ 掲載準備中</span></div>
+<div class="match-info">
+<p class="match-info__title">大会概要</p>
+<p>千葉・東京以外の関東近郊で開催されるオープン大会を掲載予定です。</p>
+<p class="match-info__title">編集部コメント</p>
+<p>県外からでも参加を検討しやすい大会を中心に選んで追加します。</p>
+</div>
+<p class="match-card__host">現在、情報を準備しています</p>
+</div>
+<div class="match-card__photo"><img alt="関東近郊の卓球大会" src="images/venue-sample.jpg"/></div>
+</article>
+</div>
+<p class="match-empty" hidden="" id="matchEmpty">該当する大会情報はまだありません。</p>
+<div class="match-info-grid reveal">
+<section class="info-panel">
+<div aria-hidden="true" class="info-panel__icon">▣</div>
+<div>
+<h3>大会情報の掲載について</h3>
+<p>大会主催者の方で、情報掲載をご希望の方はお問い合わせフォームよりご連絡ください。</p>
+<a href="./contact.html">お問い合わせはこちら <span>→</span></a>
+</div>
+</section>
+<section class="area-panel">
+<h3>エリアから探す</h3>
+<div class="area-panel__layout">
+<div aria-hidden="true" class="area-panel__map">JAPAN</div>
+<div class="area-panel__links">
+<button data-jump-filter="chiba" type="button">千葉県の大会を見る <span>→</span></button>
+<button data-jump-filter="tokyo" type="button">東京都の大会を見る <span>→</span></button>
+<button data-jump-filter="other" type="button">その他の地域を見る <span>→</span></button><button data-jump-filter="large" type="button">ラージボール大会を見る <span>→</span></button>
+</div>
+</div>
+</section>
+</div>
+<aside class="team-cta reveal">
+<img alt="卓球ラケットとボール" src="images/team-cta.jpg"/>
+<div class="team-cta__content">
+<div>
+<h2>一緒に卓球を楽しもう！</h2>
+<p>大会に参加して、仲間と最高のプレーを。</p>
+</div>
+<a href="./team.html">チームを探す <span>→</span></a>
+</div>
+</aside>
+</div>
+</section>
+<section class="sns">
+<h2 data-en="SNS">SNS</h2>
+<div class="sns-links">
+<a href="#">Instagram</a>
+<a href="#">X</a>
+<a href="#">YouTube</a>
+<a href="#">LINE</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<p>© TAKYUTTO</p>
+</footer>
+<button aria-label="ページ上部へ戻る" class="page-top" id="pageTop" type="button">↑</button>
+<script defer="" src="../js/script.js"></script>
+<script defer="" src="../js/match.js"></script>
 </body>
 </html>

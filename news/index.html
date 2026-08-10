@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="国内外の卓球ニュースを速報でお届け。日本、中国、ドイツを中心に、WTTや国内大会の試合結果、選手情報を掲載しています。">
+  <meta name="author" content="たきゅっこ暮らし">
+  <link rel="canonical" href="https://takyukko.web.app/news/">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <title>卓球ニュース速報｜たきゅっこ暮らし</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- キャッシュ対策 -->
+  <link rel="stylesheet" href="./css/style.css?v=20260809-1">
+</head>
+
+<body class="news-site">
+
+  <header class="header">
+    <a href="../index.html" class="logo">
+      <span class="logo-title">たきゅっこ暮らし</span>
+      <span class="logo-sub">〜 勝っても負けても、卓球好き。〜</span>
+    </a>
+
+    <button
+      type="button"
+      class="hamburger"
+      id="hamburger"
+      aria-label="メニューを開く"
+      aria-controls="fullscreenMenu"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="fullscreen-menu" id="fullscreenMenu" aria-label="メインメニュー">
+    <ul>
+      <li><a href="../now-planning.htm">TEAM<small>チームについて</small></a></li>
+      <li><a href="./">NEWS<small>ニュース</small></a></li>
+      <li><a href="../match/match.html">MATCH<small>試合情報</small></a></li>
+      <li><a href="../rubber/shop.html">SHOP<small>ラバーを探す</small></a></li>
+      <li><a href="../feature/index.html">COLUMNS<small>コラム</small></a></li>
+      <li><a href="../now-planning.htm">CONTACT<small>お問い合わせ</small></a></li>
+    </ul>
+  </nav>
+
+  <div class="news-parallax-stage">
+
+    <!-- section を使わず div にして、共通 section CSS の影響を完全回避 -->
+    <div class="news-visual" aria-label="卓球大会会場">
+      <img src="./images/news-hero-exact.jpg" alt="卓球大会会場">
+    </div>
+
+    <main class="news-page">
+
+      <div class="news-hero">
+        <h1>NEWS</h1>
+        <time class="news-hero__date" datetime="2026-08-06">2026.08.09</time>
+      </div>
+
+      <div class="news-layout">
+        <section class="news-feed" aria-label="卓球ニュース一覧">
+          <div id="newsList">
+
+            <section class="news-date-group">
+              <article class="news-row news-row--lead">
+                <a class="news-row__link" href="20260809-shinozuka-felix.htm">
+                  <div class="news-row__meta">
+                    <time datetime="2026-08-08T22:00">22:00</time>
+                  </div>
+                  <div class="news-row__body">
+                    <h3>【動画あり】篠塚大登、F.ルブラン撃破！初のWTTチャンピオンズ4強へ</h3>
+                    <p class="news-row__tag">WTT_CHAMPIONS_YOKOHAMA 2026</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="news-row news-row--lead">
+                <a class="news-row__link" href="20260806-wtt-champions.htm">
+                  <div class="news-row__meta">
+                    <time datetime="2026-08-06T23:16">23:16</time>
+                  </div>
+                  <div class="news-row__body">
+                    <h3>張本智和、準々決勝へ。フルゲームの接戦を制す</h3>
+                    <p class="news-row__tag">WTT CHAMPIONS</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="news-row">
+                <a class="news-row__link" href="#">
+                  <div class="news-row__meta">
+                    <time datetime="2026-08-06T22:48">22:48</time>
+                  </div>
+                  <div class="news-row__body">
+                    <h3>王楚欽がストレート勝ち。序盤から主導権を握る</h3>
+                  </div>
+                </a>
+              </article>
+
+              <article class="news-row">
+                <a class="news-row__link" href="#">
+                  <div class="news-row__meta">
+                    <time datetime="2026-08-06T22:20">22:20</time>
+                  </div>
+                  <div class="news-row__body">
+                    <h3>WTT大会、日本勢の最新結果を更新</h3>
+                  </div>
+                </a>
+              </article>
+            </section>
+
+          </div>
+
+          <nav
+            class="news-pagination"
+            id="newsPagination"
+            aria-label="ニュース一覧のページ切り替え"
+          ></nav>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>© たきゅっこ暮らし</footer>
+
+  <script src="../js/script.js"></script>
+  <script src="./news.js"></script>
+</body>
+</html>

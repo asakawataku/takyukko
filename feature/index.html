@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQB91W7233"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-JQB91W7233");
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="たきゅっこ暮らしの卓球コラム、技術解説、ラバー比較、試合情報、ニュース、アイテム記事をまとめたアーカイブページです。"
+  >
+  <title>FEATURE｜卓球コラム・特集記事｜「今日もネットイン日和」</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/archive.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="logo">
+      <span class="logo-title">たきゅっこ暮らし</span>
+      <span class="logo-sub">〜 勝っても負けても、卓球好き 〜</span>
+    </a>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="メニューを開く"
+      aria-controls="fullscreenMenu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav
+    class="fullscreen-menu"
+    id="fullscreenMenu"
+    aria-label="メインナビゲーション"
+  >
+    <ul>
+      <li><a href="../now-planning.htm">TEAM<small>チームについて</small></a></li>
+      <li><a href="../match/match.html">試合情報</a></li>
+      <li><a href="../index.html#movie">動画</a></li>
+      <li><a href="../now-planning.htm">イベント</a></li>
+      <li><a href="../index.html#sns">SNS</a></li>
+      <li><a href="../now-planning.htm">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <main class="archive-page">
+
+    <section class="archive-hero">
+      <p class="archive-hero__eyebrow">FEATURE COLUMN</p>
+      <h1>今日もネットイン日和</h1>
+      <p class="archive-hero__lead">
+        卓球の技術、用具、試合、ニュースを<br>
+        初中級者目線でお届けします！
+      </p>
+
+      <div class="archive-stats" aria-label="記事数">
+        <span>ALL ARTICLES</span>
+        <strong id="articleCount">0</strong>
+      </div>
+    </section>
+
+    <section class="archive-tools" aria-label="記事の検索と絞り込み">
+
+      <div class="archive-search">
+        <label for="articleSearch">キーワード検索</label>
+
+        <div class="archive-search__field">
+          <input
+            id="articleSearch"
+            type="search"
+            placeholder="例：ツッツキ、バックドライブ、ラバー"
+            autocomplete="off"
+          >
+          <button id="clearSearch" type="button">クリア</button>
+        </div>
+      </div>
+
+      <div class="archive-filter-row">
+
+        <div class="archive-filter">
+          <label for="categoryFilter">カテゴリー</label>
+          <select id="categoryFilter">
+            <option value="all">すべて</option>
+          </select>
+        </div>
+
+        <div class="archive-filter">
+          <label for="yearFilter">公開年</label>
+          <select id="yearFilter">
+            <option value="all">すべて</option>
+          </select>
+        </div>
+
+        <div class="archive-filter">
+          <label for="sortOrder">並び順</label>
+          <select id="sortOrder">
+            <option value="newest">新しい順</option>
+            <option value="oldest">古い順</option>
+            <option value="title">タイトル順</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="archive-tags" id="tagFilters" aria-label="タグで絞り込む"></div>
+
+    </section>
+
+    <section class="archive-results">
+
+      <div class="archive-results__head">
+        <p>
+          <strong id="resultCount">0</strong>
+          件の記事
+        </p>
+
+        <button
+          id="resetFilters"
+          class="archive-reset"
+          type="button"
+        >
+          条件をリセット
+        </button>
+      </div>
+
+      <div
+        class="archive-grid"
+        id="articleGrid"
+        aria-live="polite"
+      ></div>
+
+      <div
+        class="archive-empty"
+        id="emptyMessage"
+        hidden
+      >
+        <p>条件に合う記事が見つかりませんでした。</p>
+        <button type="button" id="emptyReset">すべての記事を見る</button>
+      </div>
+
+      <nav
+        class="archive-pagination"
+        id="pagination"
+        aria-label="記事一覧のページ送り"
+      ></nav>
+
+    </section>
+
+    <section class="archive-guide">
+      <div>
+        <p class="archive-guide__eyebrow">BROWSE BY CATEGORY</p>
+        <h2>読みたいテーマから探す</h2>
+      </div>
+
+      <div class="archive-guide__grid" id="categoryGuide"></div>
+    </section>
+
+    <section class="sns" id="sns">
+      <h2 data-en="SNS">SNS</h2>
+
+      <div class="sns-links">
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">YouTube</a>
+        <a href="#">LINE</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© たきゅっこ暮らし</footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/archive.js"></script>
+
+</body>
+</html>
