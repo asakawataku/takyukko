@@ -13,37 +13,142 @@
 
   gtag('config', 'G-JQB91W7233');
 </script>
-<meta content="千葉・東京を中心とした卓球大会スケジュール一覧です。" name="description"/>
+<meta content="千葉県・東京23区を中心とした卓球大会スケジュール一覧です。" name="description"/>
 <title>たきゅっこ暮らし｜勝っても負けても卓球好き</title>
 <link href="../css/style.css" rel="stylesheet"/>
 <link href="../css/match.css" rel="stylesheet"/>
-<style id="large-ball-styles">
-/* ラージボール専用カラー */
-.match-tab--large {
-  --large-accent: #d56a35;
+
+<style id="match-filter-colors">
+/* 4色設計
+   1) 通常/地域 = TAKYUKKO PINK
+   2) LARGE = ORANGE
+   3) P4MATCH = BLUE
+   4) i2U = PURPLE
+*/
+.match-tab { --tab-accent:#ef3b86; }
+.match-tab--large { --tab-accent:#e58a2b; }
+.match-tab--p4 { --tab-accent:#1877d2; }
+.match-tab--i2u { --tab-accent:#7756d8; }
+
+.match-tab.is-active {
+  background:var(--tab-accent);
+  border-color:var(--tab-accent);
+  color:#fff;
 }
-.match-tab--large.is-active {
-  background: var(--large-accent);
-  border-color: var(--large-accent);
-  color: #fff;
+.match-tab--large { border-color:#e58a2b; color:#b96813; }
+.match-tab--p4 { border-color:#1877d2; color:#1261ad; }
+.match-tab--i2u { border-color:#7756d8; color:#6045b9; }
+
+/* 特殊大会カードにも色を連動 */
+.match-card[data-kind="large"] { border-left:6px solid #e58a2b; }
+.match-card[data-kind="p4match"] { border-left:6px solid #1877d2; }
+.match-card[data-kind="i2u"] { border-left:6px solid #7756d8; }
+
+.match-card[data-kind="large"] .match-card__area { color:#b96813; }
+.match-card[data-kind="p4match"] .match-card__area { color:#1261ad; }
+.match-card[data-kind="i2u"] .match-card__area { color:#6045b9; }
+
+.match-source-badge {
+  display:inline-flex;
+  align-items:center;
+  margin:0 0 10px;
+  padding:4px 9px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  border:1px solid currentColor;
 }
-.match-card[data-area="large"]{
-  border-left:6px solid #f59e0b;
-  background:#f3f4f6;
+.match-source-badge--large { color:#b96813; }
+.match-source-badge--p4match { color:#1261ad; }
+.match-source-badge--i2u { color:#6045b9; }
+</style>
+
+
+<style id="match-card-cleanup">
+/* JSフィルターの hidden 属性をSPでも確実に効かせる */
+.match-card[hidden] {
+  display: none !important;
 }
 
-.match-card[data-area="large"] .match-card__area{
-  color:#f59e0b;
-  font-weight:700;
+/* 大会カード：通常=ピンク / LARGE=オレンジ / P4MATCH=青 / i2U=紫 */
+.match-card { --card-accent:#ef3b86; }
+.match-card[data-kind="large"] { --card-accent:#e58a2b; }
+.match-card[data-kind="p4match"] { --card-accent:#1877d2; }
+.match-card[data-kind="i2u"] { --card-accent:#7756d8; }
+
+/* 体育館画像は当面非表示 */
+.match-card__photo { display:none !important; }
+
+/* PC：日付＋本文の2カラム */
+.match-card {
+  grid-template-columns:minmax(92px,120px) minmax(0,1fr) !important;
+}
+.match-card .match-date {
+  background:var(--card-accent) !important;
+  color:#fff !important;
 }
 
-.match-card[data-area="large"] h3,
-.match-card[data-area="large"] .match-card__meta,
-.match-card[data-area="large"] .match-info,
-.match-card[data-area="large"] .match-card__host{
-  color:#222;
+/* スマホ：日付を左に残した2カラム */
+@media (max-width:767px) {
+  .match-card:not([hidden]) {
+    display:grid !important;
+    grid-template-columns:88px minmax(0,1fr) !important;
+    align-items:stretch;
+  }
+  .match-card .match-date {
+    width:88px !important;
+    min-width:88px;
+    height:100%;
+    min-height:100%;
+    align-self:stretch;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px 7px !important;
+    text-align:center;
+    background:var(--card-accent) !important;
+    color:#fff !important;
+  }
+  .match-card .match-date span { font-size:12px; }
+  .match-card .match-date strong {
+    font-size:27px;
+    line-height:1.05;
+    white-space:nowrap;
+  }
+  .match-card .match-date b {
+    margin-top:8px;
+    font-size:13px;
+    letter-spacing:.08em;
+  }
+  .match-card__body {
+    min-width:0;
+    padding-left:16px !important;
+    padding-right:14px !important;
+  }
+  .match-card__body h3 {
+    overflow-wrap:anywhere;
+  }
 }
-</style></head>
+
+@media (max-width:380px) {
+  .match-card:not([hidden]) { grid-template-columns:78px minmax(0,1fr) !important; }
+  .match-card .match-date { width:78px !important; min-width:78px; }
+  .match-card .match-date strong { font-size:24px; }
+}
+</style>
+
+
+<style id="match-sp-filter-fix">
+.match-tab,
+.area-panel__links button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+</style>
+
+</head>
 <body>
 <header class="header">
 <a class="logo" href="../index.html">
@@ -73,167 +178,23 @@
 <div class="match-hero__content">
 <p class="match-hero__eyebrow">TABLE TENNIS TOURNAMENT</p>
 <h1><span>MATCH</span>SCHEDULE</h1>
-<p class="match-hero__lead">千葉・東京の卓球大会スケジュール</p>
+<p class="match-hero__lead">千葉・東京23区の卓球大会スケジュール</p>
 </div>
 <p class="match-hero__notice">最新の大会情報を<br/>随時更新しています</p>
 </section>
 <section aria-labelledby="match-list-title" class="match-section">
 <div class="match-container">
 <h2 class="visually-hidden" id="match-list-title">大会一覧</h2>
-<div aria-label="地域で絞り込み" class="match-tabs" role="tablist">
+<div aria-label="地域・大会形式で絞り込み" class="match-tabs" role="tablist">
 <button aria-selected="true" class="match-tab is-active" data-filter="all" role="tab" type="button">ALL<small>すべて</small></button>
 <button aria-selected="false" class="match-tab" data-filter="chiba" role="tab" type="button">CHIBA<small>千葉県</small></button>
 <button aria-selected="false" class="match-tab" data-filter="tokyo" role="tab" type="button">TOKYO<small>東京都</small></button>
-<button aria-selected="false" class="match-tab" data-filter="other" role="tab" type="button">OTHER<small>その他の地域</small></button><button aria-selected="false" class="match-tab match-tab--large" data-filter="large" role="tab" type="button">LARGE<small>ラージボール</small></button>
+<button aria-selected="false" class="match-tab" data-filter="other" role="tab" type="button">OTHER<small>その他の地域</small></button>
+<button aria-selected="false" class="match-tab match-tab--large" data-filter="large" role="tab" type="button">LARGE<small>ラージボール</small></button>
+<button aria-selected="false" class="match-tab match-tab--p4" data-filter="p4match" role="tab" type="button">P4MATCH<small>P4マッチ</small></button>
+<button aria-selected="false" class="match-tab match-tab--i2u" data-filter="i2u" role="tab" type="button">i2U<small>イッツー</small></button>
 </div>
-<div class="match-list" id="matchList">
-<article class="match-card reveal" data-area="chiba">
-<time class="match-date" datetime="2026-08-02"><span>2026</span><strong>08.02</strong><b>SUN</b></time>
-<div class="match-card__body">
-<p class="match-card__area">CHIBA</p>
-<h3>第6回 市川オープン卓球大会（個人・団体）</h3>
-<div class="match-card__meta">
-<span>⌖ 市川市 塩浜市民体育館</span>
-<span>♙ 個人戦・団体戦</span>
-</div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>市川市で開催されるオープン大会。個人戦と団体戦が実施されます。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>個人・団体の両方が開催されるため、自分に合った種目を選びやすい大会です。中間ランクでも結構強めのイメージです。</p>
-<ul class="match-info__list"><li>申込締切：7月30日</li></ul>
-</div>
-<p class="match-card__host">情報元：nocha</p>
-<a class="match-card__link" href="https://nocha.jp/matches/75783" rel="noopener noreferrer" target="_blank">個人戦を見る <span>→</span></a>
-<a class="match-card__link" href="https://nocha.jp/matches/75784" rel="noopener noreferrer" target="_blank">団体戦を見る <span>→</span></a>
-</div>
-<div class="match-card__photo"><img alt="市川市 塩浜市民体育館" src="images/venue-chiba-port.jpg"/></div>
-</article>
-
-<article class="match-card reveal" data-area="chiba">
-<time class="match-date" datetime="2026-08-15"><span>2026</span><strong>08.15</strong><b>SAT</b></time>
-<div class="match-card__body">
-<p class="match-card__area">CHIBA</p>
-<h3>第30回 TTTD杯 男女混合シングルス</h3>
-<div class="match-card__meta">
-<span>⌖ 袖ケ浦市 臨海スポーツセンター</span>
-<span>♙ 男女混合シングルス</span>
-</div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>袖ケ浦市で開催される男女混合シングルス大会です。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>女性1割ほど、混合シングルス。学生も多く強い方も多いので楽しめます。リーグ戦3-4人の後、順位別トーナメントで優勝決めます。</p>
-<ul class="match-info__list"><li>申込締切：掲載元でご確認ください</li></ul>
-</div>
-<p class="match-card__host">情報元：nocha</p>
-<a class="match-card__link" href="https://nocha.jp/matches/74166" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
-</div>
-<div class="match-card__photo"><img alt="袖ケ浦市 臨海スポーツセンター" src="images/venue-sodegaura-rinkai.jpg"/></div>
-</article>
-
-<article class="match-card reveal" data-area="chiba">
-<time class="match-date" datetime="2026-08-15"><span>2026</span><strong>08.15</strong><b>SAT</b></time>
-<div class="match-card__body">
-<p class="match-card__area">CHIBA</p>
-<h3>エブリーグ個人＆団体賞金付き卓球大会</h3>
-<div class="match-card__meta">
-<span>⌖ 船橋アリーナ</span>
-<span>♙ シングルス・ダブルス・団体戦</span>
-</div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>船橋アリーナで開催される賞金付き卓球大会。シングルス・ダブルス・団体戦が行われます。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>youtuberや強豪校など強者集う卓球大会です。</p>
-<ul class="match-info__list"><li>申込締切：8月12日</li></ul>
-</div>
-<p class="match-card__host">情報元：nocha</p>
-<a class="match-card__link" href="https://nocha.jp/matches/70668" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
-</div>
-<div class="match-card__photo"><img alt="船橋アリーナ" src="images/venue-hunabashi-arena.jpg"/></div>
-</article>
-
-<article class="match-card reveal" data-area="chiba">
-<time class="match-date" datetime="2026-08-17"><span>2026</span><strong>08.17</strong><b>MON</b></time>
-<div class="match-card__body">
-<p class="match-card__area">CHIBA</p>
-<h3>第173回 バオダブ卓球会（硬球）</h3>
-<div class="match-card__meta">
-<span>⌖ 柏市 沼南体育館</span>
-<span>♙ 男女シングルス・ミックス・女子ダブルス</span>
-</div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>柏市で開催されるオープン大会。男女シングルス、ミックスダブルス、女子ダブルスが実施されます。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>7-8名のリーグ戦でたくさん楽しめてお得です。ベテランの強豪出現。</p>
-<ul class="match-info__list"><li>申込締切：掲載元でご確認ください</li></ul>
-</div>
-<p class="match-card__host">情報元：nocha</p>
-<a class="match-card__link" href="https://nocha.jp/matches/68490" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
-</div>
-<div class="match-card__photo"><img alt="柏市 沼南体育館" src="images/venue-kashiwa-numanan.jpg"/></div>
-</article>
-
-<article class="match-card reveal" data-area="chiba">
-<time class="match-date" datetime="2026-08-30"><span>2026</span><strong>08.30</strong><b>SUN</b></time>
-<div class="match-card__body">
-<p class="match-card__area">CHIBA</p>
-<h3>第28回 成田オープン卓球大会（団体戦）</h3>
-<div class="match-card__meta">
-<span>⌖ 重兵衛スポーツフィールド中台 成田市体育館</span>
-<span>♙ 団体戦</span>
-</div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>成田市で開催されるオープン団体戦です。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>千葉県で歴史のある大型の大会です。例年、千葉県の強豪クラブチームなど出場してます。</p>
-<ul class="match-info__list"><li>申込締切：8月4日</li></ul>
-</div>
-<p class="match-card__host">情報元：nocha</p>
-<a class="match-card__link" href="https://nocha.jp/matches/71856" rel="noopener noreferrer" target="_blank">試合ページを見る <span>→</span></a>
-</div>
-<div class="match-card__photo"><img alt="重兵衛スポーツフィールド中台 成田市体育館" src="images/venue-sample.jpg"/></div>
-</article>
-
-<article class="match-card reveal" data-area="tokyo">
-<time class="match-date"><span>COMING</span><strong>SOON</strong><b>TOKYO</b></time>
-<div class="match-card__body">
-<p class="match-card__area">TOKYO</p>
-<span class="match-card__status">サンプル</span>
-<h3>東京都内のおすすめ大会</h3>
-<div class="match-card__meta"><span>⌖ 東京都内</span><span>♙ 掲載準備中</span></div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>東京都内で参加しやすいオープン大会を掲載予定です。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>開催日や申込期限を確認しながら、おすすめ大会を厳選して追加します。</p>
-</div>
-<p class="match-card__host">現在、情報を準備しています</p>
-</div>
-<div class="match-card__photo"><img alt="東京都内の卓球大会" src="images/venue-sample.jpg"/></div>
-</article>
-
-<article class="match-card reveal" data-area="other">
-<time class="match-date"><span>COMING</span><strong>SOON</strong><b>OTHER</b></time>
-<div class="match-card__body">
-<p class="match-card__area">OTHER</p>
-<span class="match-card__status">サンプル</span>
-<h3>関東近郊のおすすめ大会</h3>
-<div class="match-card__meta"><span>⌖ 神奈川・埼玉ほか</span><span>♙ 掲載準備中</span></div>
-<div class="match-info">
-<p class="match-info__title">大会概要</p>
-<p>千葉・東京以外の関東近郊で開催されるオープン大会を掲載予定です。</p>
-<p class="match-info__title">編集部コメント</p>
-<p>県外からでも参加を検討しやすい大会を中心に選んで追加します。</p>
-</div>
-<p class="match-card__host">現在、情報を準備しています</p>
-</div>
-<div class="match-card__photo"><img alt="関東近郊の卓球大会" src="images/venue-sample.jpg"/></div>
-</article>
-</div>
+<div class="match-list" id="matchList"></div>
 <p class="match-empty" hidden="" id="matchEmpty">該当する大会情報はまだありません。</p>
 <div class="match-info-grid reveal">
 <section class="info-panel">
@@ -250,8 +211,7 @@
 <div aria-hidden="true" class="area-panel__map">JAPAN</div>
 <div class="area-panel__links">
 <button data-jump-filter="chiba" type="button">千葉県の大会を見る <span>→</span></button>
-<button data-jump-filter="tokyo" type="button">東京都の大会を見る <span>→</span></button>
-<button data-jump-filter="other" type="button">その他の地域を見る <span>→</span></button><button data-jump-filter="large" type="button">ラージボール大会を見る <span>→</span></button>
+<button data-jump-filter="tokyo" type="button">東京23区の大会を見る <span>→</span></button>
 </div>
 </div>
 </section>
@@ -283,6 +243,6 @@
 </footer>
 <button aria-label="ページ上部へ戻る" class="page-top" id="pageTop" type="button">↑</button>
 <script defer="" src="../js/script.js"></script>
-<script defer="" src="../js/match.js"></script>
+<script defer src="js/match.js"></script>
 </body>
 </html>
