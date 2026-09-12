@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JQB91W7233"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JQB91W7233');
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最安でラバーを探せる｜たきゅっこ暮らし</title>
+  <meta name="description" content="最安でラバーを探せるページです。単純に簡単な説明と、Amazon・楽天・Yahoo!ショッピングの中で一番安いお店へのリンクを掲載しています。">
+  <link rel="stylesheet" href="css/takyupochi.css">
+</head>
+<body>
+
+  <!-- ===== ヘッダー：トップへ戻る + ハンバーガー（メーカー絞り込み） ===== -->
+  <header class="tkp-header">
+    <div class="tkp-logo">
+      <span class="tkp-logo-title">たきゅっこ暮らし</span>
+      <span class="tkp-logo-sub">〜 勝っても負けても、卓球好き。〜</span>
+    </div>
+    <div class="tkp-header-right">
+      <a class="tkp-back-top" href="/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        TOP
+      </a>
+      <button id="tkpHamburger" class="tkp-hamburger" aria-label="メーカーで絞り込む" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== メーカー絞り込みドロワー ===== -->
+  <nav id="tkpFilterMenu" class="tkp-filter-menu">
+    <div class="tkp-filter-panel">
+      <span class="tkp-filter-label">メーカーで絞り込む</span>
+      <ul class="tkp-filter-chips" id="tkpFilterChips">
+        <li><button class="tkp-chip is-active" data-brand="all">すべて</button></li>
+        <li><button class="tkp-chip" data-brand="nittaku">NITTAKU</button></li>
+        <li><button class="tkp-chip" data-brand="butterfly">BUTTERFLY</button></li>
+        <li><button class="tkp-chip" data-brand="andro">ANDRO</button></li>
+        <li><button class="tkp-chip" data-brand="victas">VICTAS</button></li>
+      </ul>
+      <button class="tkp-filter-close" id="tkpFilterClose">閉じる ✕</button>
+    </div>
+  </nav>
+
+  <!-- ===== ヒーロー画像 ===== -->
+  <section class="tkp-hero">
+    <img src="./images/hero-illustration.jpg" alt="最安、なめるなよ！！">
+  </section>
+
+  <!-- ===== 「たきゅポチ値 最安勝負や！」：ペロンめくれ（自動再生・JS不要） ===== -->
+  <div class="tkp-pochi-wrap">
+    <div class="tkp-pochi-logo">
+      <img src="./images/pochi-logo.jpg" alt="たきゅポチ値 最安勝負や！ yahoo!ストア・楽天・amazon">
+    </div>
+  </div>
+
+  <main class="shop-page">
+    <header class="shop-heading">
+      <p class="shop-heading__eyebrow">人気順でラバーが最安で選べる！</p>
+      <h1>激安サーチ「たきゅポチ」</h1>
+      <p class="shop-heading__lead">定期的にラバー販売サイトを調べ、最安価格でお求めできるようになってます。（ポイント率なども含め）。右上メニューからメーカー別表示も出来ます。ポチポチしてみよう！<br></p>
+    </header>
+
+    <div class="tkp-active-filter" id="tkpActiveFilter">
+      <span id="tkpActiveFilterText"></span>
+      <button id="tkpClearFilter">すべて表示に戻す</button>
+    </div>
+
+    <section class="rubber-grid" aria-label="卓球ラバー商品一覧" id="tkpGrid">
+      <!-- 商品カードは rubbers.json から takyupochi.js が自動生成 -->
+    </section>
+
+    <p class="tkp-empty" id="tkpEmpty">このメーカーのラバーは近日追加予定です。</p>
+
+    <p class="affiliate-note">※性能などの詳細はメーカーサイトでご確認ください。※ 本ページにはアフィリエイトリンクを含みます。価格・在庫・商品仕様は各販売サイトでご確認ください。</p>
+  </main>
+  <script src="js/takyupochi.js" defer></script>
+</body>
+</html>

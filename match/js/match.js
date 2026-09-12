@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const badge = (match) => {
+    if (match.kind === "official")
+      return '<span class="match-source-badge match-source-badge--official">OFFICIAL</span>';
     if (match.kind === "large")
       return '<span class="match-source-badge match-source-badge--large">LARGE</span>';
     if (match.kind === "p4match")
@@ -96,40 +98,39 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const matches = await response.json();
 
-    // 全大会を開催日順に固定。同日は priority の小さい順。
+    // 開催日順に並び替え。同日の場合は priority の小さい順。
     matches.sort((a, b) => {
       if (a.date !== b.date) {
         return a.date.localeCompare(b.date);
       }
+
       return (a.priority ?? 999) - (b.priority ?? 999);
     });
 
-    // SPでもCSSの display 指定に影響されないよう、
-    // hiddenで隠すのではなく、対象データだけ再描画する。
-    const getFilteredMatches = (filter) => {
-      if (filter === "all") {
-        return matches;
-      }
+    list.innerHTML = matches.map(renderCard).join("");
 
+    const matchesFilter = (card, filter) => {
+      if (filter === "all") return true;
       if (["chiba", "tokyo", "other"].includes(filter)) {
-        return matches.filter(match => match.area === filter);
+        return card.dataset.area === filter;
       }
-
-      if (["large", "p4match", "i2u"].includes(filter)) {
-        return matches.filter(match => (match.kind || "regular") === filter);
+      if (["official", "large", "p4match", "i2u"].includes(filter)) {
+        return card.dataset.kind === filter;
       }
-
-      return [];
+      return false;
     };
 
-    const renderMatches = (filter) => {
-      const filteredMatches = getFilteredMatches(filter);
+    const applyFilter = (filter) => {
+      const cards = [...list.querySelectorAll(".match-card")];
+      let visibleCount = 0;
 
-      list.innerHTML = filteredMatches.map(renderCard).join("");
+      cards.forEach(card => {
+        const show = matchesFilter(card, filter);
+        card.hidden = !show;
+        if (show) visibleCount++;
+      });
 
-      if (empty) {
-        empty.hidden = filteredMatches.length !== 0;
-      }
+      if (empty) empty.hidden = visibleCount !== 0;
 
       tabs.forEach(tab => {
         const active = tab.dataset.filter === filter;
@@ -138,18 +139,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     };
 
-    tabs.forEach(tab => {
-      tab.addEventListener("click", (event) => {
-        event.preventDefault();
-        renderMatches(tab.dataset.filter);
-      });
-    });
+    tabs.forEach(tab =>
+      tab.addEventListener("click", () => applyFilter(tab.dataset.filter))
+    );
 
     jumpButtons.forEach(button => {
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-        renderMatches(button.dataset.jumpFilter);
-
+      button.addEventListener("click", () => {
+        applyFilter(button.dataset.jumpFilter);
         document.getElementById("match-list-title")?.scrollIntoView({
           behavior: "smooth",
           block: "start"
@@ -157,7 +153,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
 
-    renderMatches("all");
+    applyFilter("all");
   } catch (error) {
     console.error(error);
     list.innerHTML = `

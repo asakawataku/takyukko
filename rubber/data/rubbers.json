@@ -1,0 +1,245 @@
+[
+  {
+    "id": "dignics09c",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "ディグニクス09C",
+    "image": "./images/butterfly-dignics09C.jpg",
+    "rating": 4.9,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "粘着性トップシートとスプリング スポンジXを組み合わせ、回転量の多いドライブや台上技術、カウンターを狙いやすいモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy05",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー05",
+    "image": "./images/butterfly-tenergy05.jpg",
+    "rating": 4.9,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "高い回転性能で知られるテナジーシリーズの代表モデル。",
+    "links": {}
+  },
+  {
+    "id": "dignics05",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "ディグニクス05",
+    "image": "./images/butterfly-dignics05.jpg",
+    "rating": 4.8,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "高い回転性能が特長。前中陣でのパワードライブやカウンターなど、回転重視の攻撃に向くモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy05hard",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー05ハード",
+    "image": "./images/butterfly-tenergy05HARD.jpg",
+    "rating": 4.7,
+    "stars": "★★★★★",
+    "level": "上級者",
+    "note": "テナジー05の特長を生かしつつ、より硬いスポンジで威力を求めるモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy19",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー19",
+    "image": "./images/butterfly-tenergy19.jpg",
+    "rating": 4.7,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "ボールをつかむ感覚と、強い打球での威力を意識したモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy80",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー80",
+    "image": "./images/butterfly-tenergy80.jpg",
+    "rating": 4.7,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "回転とスピードのバランスを重視したテナジーシリーズ。",
+    "links": {}
+  },
+  {
+    "id": "tenergy64",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー64",
+    "image": "./images/butterfly-tenergy64.jpg",
+    "rating": 4.6,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "スピード性能を特長とし、攻撃的な打球を出しやすいモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy05fx",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー05FX",
+    "image": "./images/butterfly-tenergy05FX.jpg",
+    "rating": 4.6,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "テナジー05の回転性能を、より軟らかい打球感で扱いやすくしたモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy64fx",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー64FX",
+    "image": "./images/butterfly-tenergy64fx.jpg",
+    "rating": 4.5,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "テナジー64のスピード性能を、より軟らかい打球感で扱いやすくしたモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy80fx",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー80FX",
+    "image": "./images/butterfly-tenergy80FX.jpg",
+    "rating": 4.5,
+    "stars": "★★★★★",
+    "level": "中級〜上級者",
+    "note": "回転とスピードのバランスに優れる80系を、軟らかい打球感で扱いやすくしたモデル。",
+    "links": {}
+  },
+  {
+    "id": "tenergy25",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー25",
+    "image": "./images/butterfly-tenergy25.jpg",
+    "rating": 4.4,
+    "stars": "★★★★☆",
+    "level": "中級〜上級者",
+    "note": "台上技術や前陣でのプレーを意識したテナジーシリーズ。",
+    "links": {}
+  },
+  {
+    "id": "tenergy25fx",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "テナジー25FX",
+    "image": "./images/butterfly-tenergy25FX.jpg",
+    "rating": 4.3,
+    "stars": "★★★★☆",
+    "level": "中級〜上級者",
+    "note": "前陣攻守を得意とする25系を、より軟らかい打球感で扱いやすくしたモデル。",
+    "links": {}
+  },
+  {
+    "id": "g1",
+    "brand": "nittaku",
+    "brandLabel": "NITTAKU",
+    "name": "ファスターク G-1",
+    "image": "./images/Nittaku-G1.jpg",
+    "rating": 4.8,
+    "level": "初中級〜上級者",
+    "note": "AIも人気No.1と選ぶラバー。回転と安定感とバランスに優れた定番ラバー。",
+    "links": {
+      "amazon": {
+        "url": "https://link.amazon/B08pa8bil",
+        "price": 4562
+      },
+      "rakuten": {
+        "url": "https://a.r10.to/hPjB5F",
+        "price": 4740
+      },
+      "yahoo": {
+        "url": "https://yahoo.jp/t5kEdm",
+        "price": 4700
+      }
+    }
+  },
+  {
+    "id": "rozena",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "ロゼナ",
+    "image": "./images/butterfly-rozena.jpg",
+    "rating": 4.5,
+    "stars": "★★★★★",
+    "level": "初級〜中級者",
+    "note": "扱いやすく、次のステップへ進みたい選手向け。ポイント付ければ¥3500代",
+    "links": {
+      "amazon": {
+        "url": "https://link.amazon/B0d4t4vow",
+        "price": 4153
+      },
+      "rakuten": {
+        "url": "https://a.r10.to/h9afvS",
+        "price": 3710
+      },
+      "yahoo": {
+        "url": "https://yahoo.jp/NfSkNg",
+        "price": 3790
+      }
+    }
+  },
+  {
+    "id": "blastack",
+    "brand": "nittaku",
+    "brandLabel": "NITTAKU",
+    "name": "ブラスタック",
+    "image": "./images/Nittaku-blastac.jpg",
+    "rating": 4.3,
+    "stars": "★★★★☆",
+    "level": "初中級〜中級者",
+    "note": "¥4000前後で購入できればお得。",
+    "links": {
+      "amazon": {
+        "url": "https://link.amazon/B03W8KkKU",
+        "price": 4519
+      },
+      "rakuten": {
+        "url": "https://a.r10.to/hRCyKq",
+        "price": 4004
+      },
+      "yahoo": {
+        "url": "https://yahoo.jp/Zbh8LZ",
+        "price": 4004
+      }
+    }
+  },
+  {
+    "id": "glayzer",
+    "brand": "butterfly",
+    "brandLabel": "BUTTERFLY",
+    "name": "グレイザー",
+    "image": "./images/butterfly-glazer.jpg",
+    "rating": 4.4,
+    "stars": "★★★★☆",
+    "level": "中級〜上級者",
+    "note": "回転性能と安定感を両立したステップアップ向け。",
+    "links": {
+      "amazon": {
+        "url": "https://link.amazon/B04Rl3pEK",
+        "price": 4805
+      },
+      "rakuten": {
+        "url": "https://a.r10.to/hRCyKq",
+        "price": 4800
+      },
+      "yahoo": {
+        "url": "https://yahoo.jp/N85AMK",
+        "price": 4840
+      }
+    }
+  }
+]

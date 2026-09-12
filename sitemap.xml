@@ -1,64 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://takyukko.web.app/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-08-20</lastmod>
   </url>
   <url>
     <loc>https://takyukko.web.app/match/match.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-20</lastmod>
   </url>
   <url>
     <loc>https://takyukko.web.app/rubber/shop.html</loc>
     <lastmod>2026-08-05</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/zyre03-glayzer.htm</loc>
-    <lastmod>2026-07-26</lastmod>
+    <loc>https://takyukko.web.app/feature/index.html</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/20260721takukichi.htm</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://takyukko.web.app/feature/20260820-trick-serves.htm</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/20260722p4match.htm</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://takyukko.web.app/feature/20260818-killer-serves.htm</loc>
+    <lastmod>2026-08-18</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/20260723nanoblock.htm</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://takyukko.web.app/feature/20260813-chinese-knuckle-ball.htm</loc>
+    <lastmod>2026-08-13</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/20260723G1.htm</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://takyukko.web.app/feature/20260813-infinity-mxs-mxp-review.htm</loc>
+    <lastmod>2026-08-13</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/20260726-backhand-drive-guide.htm</loc>
-    <lastmod>2026-07-26</lastmod>
-  </url>
-  <url>
-    <loc>https://takyukko.web.app/feature/20260726-tsuttsuki-guide.htm</loc>
-    <lastmod>2026-07-26</lastmod>
-  </url>
-  <url>
-    <loc>https://takyukko.web.app/feature/20260728-youtuber-hirano.htm</loc>
-    <lastmod>2026-07-28</lastmod>
-  </url>
-  <url>
-    <loc>https://takyukko.web.app/feature/20260728-item-powertape.htm</loc>
-    <lastmod>2026-07-28</lastmod>
-  </url>
-  <url>
-    <loc>https://takyukko.web.app/feature/20260729-youtuber-aochan.htm</loc>
-    <lastmod>2026-07-29</lastmod>
-  </url>
-  <url>
-    <loc>https://takyukko.web.app/feature/20260730-blastack-video-review.htm</loc>
-    <lastmod>2026-07-30</lastmod>
-  </url>
-  <url>
-    <loc>https://takyukko.web.app/feature/20260731-chinese-table-tennis-basics.htm</loc>
-    <lastmod>2026-07-31</lastmod>
+    <loc>https://takyukko.web.app/feature/20260804-wtt-champions-yokohama.htm</loc>
+    <lastmod>2026-08-04</lastmod>
   </url>
   <url>
     <loc>https://takyukko.web.app/feature/20260801-rozena-secret-weapon.htm</loc>
@@ -69,8 +45,68 @@
     <lastmod>2026-08-01</lastmod>
   </url>
   <url>
-    <loc>https://takyukko.web.app/feature/20260804-wtt-champions-yokohama.htm</loc>
-    <lastmod>2026-08-04</lastmod>
+    <loc>https://takyukko.web.app/feature/20260731-chinese-table-tennis-basics.htm</loc>
+    <lastmod>2026-07-31</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260730-blastack-video-review.htm</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260730-short-pips-comparison.htm</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260730-zyre03-video-review.htm</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260730-youtuber-pingpongsan.htm</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260729-youtuber-glazerman.htm</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260729-youtuber-aochan.htm</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260728-youtuber-hirano.htm</loc>
+    <lastmod>2026-07-28</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260728-item-powertape.htm</loc>
+    <lastmod>2026-07-28</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260726-backhand-drive-guide.htm</loc>
+    <lastmod>2026-07-26</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260726-tsuttsuki-guide.htm</loc>
+    <lastmod>2026-07-26</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260723G1.htm</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260723nanoblock.htm</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260722p4match.htm</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/20260721takukichi.htm</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://takyukko.web.app/feature/zyre03-glayzer.htm</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://takyukko.web.app/news/</loc>

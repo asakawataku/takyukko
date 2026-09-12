@@ -11,11 +11,12 @@
   <title>卓球ニュース速報｜たきゅっこ暮らし</title>
 
   <link rel="stylesheet" href="../css/style.css">
-  <!-- キャッシュ対策 -->
-  <link rel="stylesheet" href="./css/style.css?v=20260809-1">
+  <link rel="stylesheet" href="./css/style.css?v=20260913-4">
+
+
 </head>
 
-<body class="news-site">
+<body class="news-site news-motion-list news-journal-v2 page-transition-enabled">
 
   <header class="header">
     <a href="../index.html" class="logo">
@@ -46,81 +47,329 @@
     </ul>
   </nav>
 
-  <div class="news-parallax-stage">
+  <div class="news-motion-stage">
+    <div class="news-motion-bg" aria-hidden="true">
+      <!--
+      実際の動画を使う場合は下記コメントを外してください。
+      mp4 は /news/video/news-bg.mp4 を想定しています。
 
-    <!-- section を使わず div にして、共通 section CSS の影響を完全回避 -->
-    <div class="news-visual" aria-label="卓球大会会場">
-      <img src="./images/news-hero-exact.jpg" alt="卓球大会会場">
+      <video class="news-motion-video" autoplay muted loop playsinline preload="metadata">
+        <source src="./video/news-bg.mp4" type="video/mp4">
+      </video>
+      -->
+      <div class="news-motion-orb news-motion-orb--01"></div>
+      <div class="news-motion-orb news-motion-orb--02"></div>
+      <div class="news-motion-orb news-motion-orb--03"></div>
+      <div class="news-motion-grid"></div>
     </div>
 
-    <main class="news-page">
+    <main class="news-motion-page">
 
-      <div class="news-hero">
-        <h1>NEWS</h1>
-        <time class="news-hero__date" datetime="2026-08-06">2026.08.09</time>
-      </div>
-
-      <div class="news-layout">
-        <section class="news-feed" aria-label="卓球ニュース一覧">
-          <div id="newsList">
-
-            <section class="news-date-group">
-              <article class="news-row news-row--lead">
-                <a class="news-row__link" href="20260809-shinozuka-felix.htm">
-                  <div class="news-row__meta">
-                    <time datetime="2026-08-08T22:00">22:00</time>
-                  </div>
-                  <div class="news-row__body">
-                    <h3>【動画あり】篠塚大登、F.ルブラン撃破！初のWTTチャンピオンズ4強へ</h3>
-                    <p class="news-row__tag">WTT_CHAMPIONS_YOKOHAMA 2026</p>
-                  </div>
-                </a>
-              </article>
-
-              <article class="news-row news-row--lead">
-                <a class="news-row__link" href="20260806-wtt-champions.htm">
-                  <div class="news-row__meta">
-                    <time datetime="2026-08-06T23:16">23:16</time>
-                  </div>
-                  <div class="news-row__body">
-                    <h3>張本智和、準々決勝へ。フルゲームの接戦を制す</h3>
-                    <p class="news-row__tag">WTT CHAMPIONS</p>
-                  </div>
-                </a>
-              </article>
-
-              <article class="news-row">
-                <a class="news-row__link" href="#">
-                  <div class="news-row__meta">
-                    <time datetime="2026-08-06T22:48">22:48</time>
-                  </div>
-                  <div class="news-row__body">
-                    <h3>王楚欽がストレート勝ち。序盤から主導権を握る</h3>
-                  </div>
-                </a>
-              </article>
-
-              <article class="news-row">
-                <a class="news-row__link" href="#">
-                  <div class="news-row__meta">
-                    <time datetime="2026-08-06T22:20">22:20</time>
-                  </div>
-                  <div class="news-row__body">
-                    <h3>WTT大会、日本勢の最新結果を更新</h3>
-                  </div>
-                </a>
-              </article>
-            </section>
-
+      
+      <section class="journal-hero" aria-labelledby="news-title">
+        <div class="journal-hero__top">
+          <div class="journal-hero__copy">
+            <p class="journal-kicker">WE LOVE TABLE TENNIS</p>
+            <h1 id="news-title">NEWS</h1>
+            <p class="journal-subtitle">たきゅっこニュース</p>
           </div>
 
-          <nav
-            class="news-pagination"
-            id="newsPagination"
-            aria-label="ニュース一覧のページ切り替え"
-          ></nav>
-        </section>
-      </div>
+          <div class="news-orbit" aria-label="たきゅっこニュース">
+            <svg class="news-orbit__ring" viewBox="0 0 220 220" aria-hidden="true">
+              <defs>
+                <path id="newsOrbitPath"
+                  d="M110,110 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/>
+              </defs>
+              <text>
+                <textPath href="#newsOrbitPath" startOffset="0%">
+                  TAKYUKKO NEWS • TAKYUKKO NEWS •
+                </textPath>
+              </text>
+            </svg>
+
+            <div class="news-orbit__mark" aria-hidden="true">
+              <span>に</span>
+            </div>
+
+            <span class="news-orbit__arc news-orbit__arc--01" aria-hidden="true"></span>
+            <span class="news-orbit__arc news-orbit__arc--02" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="journal-hero__date">
+          <time datetime="2026-09-13">2026.09.13</time>
+        </div>
+
+        <div class="journal-hero__statement">
+          <p>
+            たきゅっこ目線の、
+            ちょっと身近な卓球ニュース掲載中。
+          </p>
+          <p class="journal-hero__lead">
+            講習会・イベント・アイテム・リリースなどアマチュア目線で時間があれば行ってみたい、気になる！そんな情報を掲載してます。
+          </p>
+        </div>
+      </section>
+
+<section class="news-motion-feed" aria-label="卓球ニュース一覧">
+        <div id="newsList">
+
+          <section class="news-date-group">
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260912-tleague-coin-rally.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">09.12–03.07</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">全国・台湾</span>
+                </div>
+                <div class="news-row__category">T.LEAGUE</div>
+                <div class="news-row__body"><h3><span>街歩きが卓球イベントに！Tリーグ「コインコレクションラリー」スタート</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260920-asian-games-tabletennis.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">09.20–28</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">愛知・豊田市</span>
+                </div>
+                <div class="news-row__category">TOURNAMENT</div>
+                <div class="news-row__body"><h3><span>張本智和、松島輝空ら日本代表が挑む！アジア競技大会・卓球が豊田で開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260923-tokyo-league-division1.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">09.23</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・日野市</span>
+                </div>
+                <div class="news-row__category">LEAGUE</div>
+                <div class="news-row__body"><h3><span>東京の1部チームが激突！東卓リーグ男子1部・女子1部が9月23日開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260930-butterfly-school-autumn-winter.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">09.30–12.11</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・杉並区</span>
+                </div>
+                <div class="news-row__category">LESSON</div>
+                <div class="news-row__body"><h3><span>藤井寛子さんから直接学べる！バタフライ卓球教室2026年・秋冬</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260925-nittaku-tei-coach-school.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">09.25–11.13</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・秋葉原</span>
+                </div>
+                <div class="news-row__category">LESSON</div>
+                <div class="news-row__body"><h3><span>ニッタク本社で全10回！鄭慧萍コーチ卓球教室が秋葉原で開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260904-tleague-free-invitation.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">応募</span>
+                  <span class="news-row__event-day">09.04–10.18</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">全国</span>
+                </div>
+                <div class="news-row__category">T.LEAGUE</div>
+                <div class="news-row__body"><h3><span>Tリーグが合計約1万人を無料招待！第4弾・11月開催6試合を受付中</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260912-apollozone-8th-sale.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">09.12–26</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">大阪・天王寺区</span>
+                </div>
+                <div class="news-row__category">SALE</div>
+                <div class="news-row__body"><h3><span>最大70％OFF！アポロゾーンスポーツ「8周年祭セール」開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260913-kokusai-autumn-winter-products.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">新作</span>
+                  <span class="news-row__event-day">2026 A/W</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">ONLINE</span>
+                </div>
+                <div class="news-row__category">GEAR</div>
+                <div class="news-row__body"><h3><span>卓球の秋冬新作が続々！国際卓球「2026年秋冬新商品」64アイテム</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20261003-chiba-all-japan-qualifier.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">10.03・04</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">千葉・旭市</span>
+                </div>
+                <div class="news-row__category">TOURNAMENT</div>
+                <div class="news-row__body"><h3><span>千葉から全日本へ！千葉県卓球選手権 兼 全日本予選会が10月3・4日開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20261018-u15-coaching-seminar.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">10.18</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・墨田区</span>
+                </div>
+                <div class="news-row__category">SEMINAR</div>
+                <div class="news-row__body"><h3><span>参加無料！宮﨑義仁さんによるU15指導者講習会が10月18日開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20261023-all-japan-masters.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">期間</span>
+                  <span class="news-row__event-day">10.23–25</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">三重・津市</span>
+                </div>
+                <div class="news-row__category">MASTERS</div>
+                <div class="news-row__body"><h3><span>年代別日本一を決める！全日本卓球選手権マスターズが10月23〜25日開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260920-jin-takuya-seminar.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">09.20</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・板橋区</span>
+                </div>
+                <div class="news-row__category">EVENT</div>
+
+                <div class="news-row__body">
+                  <h3><span>“神サーブ”を実際に受けられる！神巧也選手の特別講習会</span></h3>
+                </div>
+
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260923-masataka-morizono-seminar.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">09.23</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・板橋区</span>
+                </div>
+                <div class="news-row__category">EVENT</div>
+                <div class="news-row__body"><h3><span>森薗政崇選手と“2本勝負”！特別講習会</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260919-karahashi-trial-event.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">09.19–23</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">東京・渋谷区</span>
+                </div>
+                <div class="news-row__category">EVENT</div>
+                <div class="news-row__body"><h3><span>196本を打ち比べ！唐橋卓球・代々木店で大試打会が開催</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260926-kanazawa-street-tabletennis.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">09.26・27</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">石川・金沢市</span>
+                </div>
+                <div class="news-row__category">EVENT</div>
+                <div class="news-row__body"><h3><span>Tリーガーに挑戦！「金沢ストリート卓球2026」</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260926-shimane-open-junior.htm">
+                <div class="news-row__event-topline">
+                  <span class="news-row__event-label">開催</span>
+                  <span class="news-row__event-day">09.26・27</span>
+                  <span class="news-row__event-separator">—</span>
+                  <span class="news-row__location">島根・出雲市</span>
+                </div>
+                <div class="news-row__category">EVENT</div>
+                <div class="news-row__body"><h3><span>全国のジュニア強豪が島根へ！第5回島根オープン小中学生卓球大会</span></h3></div>
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="news-row news-row--lead">
+              <a class="news-row__link" href="20260809-shinozuka-felix.htm">
+                <div class="news-row__meta">
+                  <time datetime="2026-08-08">2026.08.08</time>
+                </div>
+
+                <div class="news-row__category">WTT</div>
+
+                <div class="news-row__body">
+                  <h3><span>【動画あり】篠塚大登、F.ルブラン撃破！初のWTTチャンピオンズ4強へ</span></h3>
+                </div>
+
+                <span class="news-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+          </section>
+        </div>
+
+        <nav
+          class="news-pagination"
+          id="newsPagination"
+          aria-label="ニュース一覧のページ切り替え"
+        ></nav>
+      </section>
 
     </main>
   </div>
@@ -128,6 +377,155 @@
   <footer>© たきゅっこ暮らし</footer>
 
   <script src="../js/script.js"></script>
-  <script src="./news.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const newsList = document.getElementById("newsList");
+  const pagination = document.getElementById("newsPagination");
+  if (!newsList || !pagination) return;
+  const newsItems = [...newsList.querySelectorAll(".news-row")];
+  const dateGroups = [...newsList.querySelectorAll(".news-date-group")];
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(newsItems.length / itemsPerPage);
+  let currentPage = 1;
+
+  function updateDateGroups() {
+    dateGroups.forEach(group => {
+      group.hidden = ![...group.querySelectorAll(".news-row")].some(item => !item.hidden);
+    });
+  }
+  function createButton(label, page, current = false, disabled = false) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = label;
+    button.className = "news-pagination__button";
+    if (current) {
+      button.classList.add("is-current");
+      button.setAttribute("aria-current", "page");
+    }
+    button.disabled = disabled;
+    button.addEventListener("click", () => showPage(page));
+    return button;
+  }
+  function renderPagination() {
+    pagination.innerHTML = "";
+    if (totalPages <= 1) { pagination.hidden = true; return; }
+    pagination.hidden = false;
+    pagination.appendChild(createButton("PREV", currentPage - 1, false, currentPage === 1));
+    for (let i = 1; i <= totalPages; i++) {
+      pagination.appendChild(createButton(String(i).padStart(2, "0"), i, i === currentPage));
+    }
+    pagination.appendChild(createButton("NEXT", currentPage + 1, false, currentPage === totalPages));
+  }
+  function showPage(page) {
+    currentPage = Math.max(1, Math.min(page, totalPages));
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    newsItems.forEach((item, index) => item.hidden = !(index >= start && index < end));
+    updateDateGroups();
+    renderPagination();
+  }
+  showPage(1);
+});
+</script>
+
+
+<style id="takyukko-page-transition-inline">
+  .tt-page-transition{
+    position:fixed;
+    inset:0;
+    z-index:2147483647;
+    pointer-events:none;
+    transform:translateX(-100%);
+    background:linear-gradient(115deg,#4f075f 0%,#85116e 42%,#d11950 75%,#f02b49 100%);
+    will-change:transform;
+  }
+  .tt-page-transition::before{
+    content:"TAKYUKKO";
+    position:absolute;
+    left:7vw;
+    bottom:7vh;
+    color:#fff;
+    font:900 clamp(28px,5vw,72px)/1 Arial,sans-serif;
+    letter-spacing:.08em;
+  }
+  .tt-page-transition.is-in{
+    animation:ttCover .55s cubic-bezier(.76,0,.24,1) forwards;
+  }
+  .tt-page-transition.is-out{
+    transform:translateX(0);
+    animation:ttReveal .62s cubic-bezier(.76,0,.24,1) forwards;
+  }
+  .tt-color-shift{
+    position:fixed;
+    inset:0;
+    z-index:2147483646;
+    pointer-events:none;
+    opacity:0;
+    background:rgba(104,8,101,.72);
+    backdrop-filter:saturate(1.35) contrast(1.05);
+  }
+  .tt-color-shift.is-in{animation:ttTintIn .3s ease forwards;}
+  .tt-color-shift.is-out{opacity:.72;animation:ttTintOut .55s ease forwards;}
+  @keyframes ttCover{to{transform:translateX(0)}}
+  @keyframes ttReveal{to{transform:translateX(100%)}}
+  @keyframes ttTintIn{to{opacity:.72}}
+  @keyframes ttTintOut{to{opacity:0}}
+  @media (prefers-reduced-motion:reduce){
+    .tt-page-transition,.tt-color-shift{display:none!important}
+  }
+</style>
+<script id="takyukko-page-transition-inline-js">
+document.addEventListener("DOMContentLoaded", function () {
+  const reduce = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const tint = document.createElement("div");
+  tint.className = "tt-color-shift";
+  tint.setAttribute("aria-hidden","true");
+
+  const wipe = document.createElement("div");
+  wipe.className = "tt-page-transition";
+  wipe.setAttribute("aria-hidden","true");
+
+  document.body.appendChild(tint);
+  document.body.appendChild(wipe);
+
+  if (!reduce && sessionStorage.getItem("tt-transition") === "1") {
+    sessionStorage.removeItem("tt-transition");
+    tint.classList.add("is-out");
+    wipe.classList.add("is-out");
+    setTimeout(() => {
+      tint.className = "tt-color-shift";
+      wipe.className = "tt-page-transition";
+    }, 700);
+  }
+
+  document.addEventListener("click", function(e){
+    const a = e.target.closest(".news-row__link");
+    if (!a || reduce) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+    const href = a.getAttribute("href");
+    if (!href || href.startsWith("#")) return;
+
+    const url = new URL(a.href, location.href);
+    if (url.origin !== location.origin) return;
+
+    e.preventDefault();
+
+    if (wipe.classList.contains("is-in")) return;
+
+    tint.classList.add("is-in");
+    wipe.classList.add("is-in");
+    sessionStorage.setItem("tt-transition","1");
+
+    setTimeout(function(){
+      location.href = url.href;
+    }, 570);
+  });
+});
+</script>
+
 </body>
 </html>

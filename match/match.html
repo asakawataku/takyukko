@@ -19,13 +19,15 @@
 <link href="../css/match.css" rel="stylesheet"/>
 
 <style id="match-filter-colors">
-/* 4色設計
+/* 5色設計
    1) 通常/地域 = TAKYUKKO PINK
-   2) LARGE = ORANGE
-   3) P4MATCH = BLUE
-   4) i2U = PURPLE
+   2) 公式 = GREEN
+   3) LARGE = ORANGE
+   4) P4MATCH = BLUE
+   5) i2U = PURPLE
 */
 .match-tab { --tab-accent:#ef3b86; }
+.match-tab--official { --tab-accent:#18a66f; }
 .match-tab--large { --tab-accent:#e58a2b; }
 .match-tab--p4 { --tab-accent:#1877d2; }
 .match-tab--i2u { --tab-accent:#7756d8; }
@@ -35,15 +37,18 @@
   border-color:var(--tab-accent);
   color:#fff;
 }
+.match-tab--official { border-color:#18a66f; color:#11805a; }
 .match-tab--large { border-color:#e58a2b; color:#b96813; }
 .match-tab--p4 { border-color:#1877d2; color:#1261ad; }
 .match-tab--i2u { border-color:#7756d8; color:#6045b9; }
 
 /* 特殊大会カードにも色を連動 */
+.match-card[data-kind="official"] { border-left:6px solid #18a66f; }
 .match-card[data-kind="large"] { border-left:6px solid #e58a2b; }
 .match-card[data-kind="p4match"] { border-left:6px solid #1877d2; }
 .match-card[data-kind="i2u"] { border-left:6px solid #7756d8; }
 
+.match-card[data-kind="official"] .match-card__area { color:#11805a; }
 .match-card[data-kind="large"] .match-card__area { color:#b96813; }
 .match-card[data-kind="p4match"] .match-card__area { color:#1261ad; }
 .match-card[data-kind="i2u"] .match-card__area { color:#6045b9; }
@@ -59,6 +64,7 @@
   letter-spacing:.08em;
   border:1px solid currentColor;
 }
+.match-source-badge--official { color:#11805a; }
 .match-source-badge--large { color:#b96813; }
 .match-source-badge--p4match { color:#1261ad; }
 .match-source-badge--i2u { color:#6045b9; }
@@ -71,8 +77,9 @@
   display: none !important;
 }
 
-/* 大会カード：通常=ピンク / LARGE=オレンジ / P4MATCH=青 / i2U=紫 */
+/* 大会カード：通常=ピンク / 公式=緑 / LARGE=オレンジ / P4MATCH=青 / i2U=紫 */
 .match-card { --card-accent:#ef3b86; }
+.match-card[data-kind="official"] { --card-accent:#18a66f; }
 .match-card[data-kind="large"] { --card-accent:#e58a2b; }
 .match-card[data-kind="p4match"] { --card-accent:#1877d2; }
 .match-card[data-kind="i2u"] { --card-accent:#7756d8; }
@@ -190,6 +197,7 @@
 <button aria-selected="false" class="match-tab" data-filter="chiba" role="tab" type="button">CHIBA<small>千葉県</small></button>
 <button aria-selected="false" class="match-tab" data-filter="tokyo" role="tab" type="button">TOKYO<small>東京都</small></button>
 <button aria-selected="false" class="match-tab" data-filter="other" role="tab" type="button">OTHER<small>その他の地域</small></button>
+<button aria-selected="false" class="match-tab match-tab--official" data-filter="official" role="tab" type="button">OFFICIAL<small>公式大会</small></button>
 <button aria-selected="false" class="match-tab match-tab--large" data-filter="large" role="tab" type="button">LARGE<small>ラージボール</small></button>
 <button aria-selected="false" class="match-tab match-tab--p4" data-filter="p4match" role="tab" type="button">P4MATCH<small>P4マッチ</small></button>
 <button aria-selected="false" class="match-tab match-tab--i2u" data-filter="i2u" role="tab" type="button">i2U<small>イッツー</small></button>

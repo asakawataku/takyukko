@@ -40,7 +40,7 @@ content="勝っても負けても卓球好き。大会情報・動画・コラ�
 <ul>
 <li><a href="now-planning.htm">TEAM<small>チームについて</small></a></li>
 <li><a href="match/match.html">試合情報</a></li>
-<li><a href="rubber/shop.html">ラバーを探す</a></li>
+<li><a href="rubber/index.html">ラバーを探す</a></li>
 <li><a href="now-planning.htm">イベント</a></li>
 <li><a href="feature/index.html">コラム</a></li>
 <li><a href="now-planning.htm">お問い合わせ</a></li>
@@ -52,6 +52,7 @@ content="勝っても負けても卓球好き。大会情報・動画・コラ�
 <div class="slide active"><a href="match/match.html"><img src="images/hero08.png" alt="試合情報・千葉・東京" loading="eager" fetchpriority="high"></a></div>
 <div class="slide"><a href="feature/index.html"><img src="images/hero07.jpg" alt="卓球コラム「今日もネットイン日和」" loading="lazy"></a></div>
 <div class="slide"><img src="images/hero01.jpg"alt="たきゅっこ暮らし" loading="lazy"></div>
+<!-- <div class="slide"><a href="rubber/index.html"><img src="images/hero09.png" alt="p4match" loading="lazy"></a></div> -->
 <div class="slide"><a href="https://p4match.com/index.php"><img src="images/hero02.jpg" alt="p4match" loading="lazy"></a></div>
 <div class="slide"><a href="https://www.youtube.com/watch?v=SuEVVsaPgVA"><img src="images/hero05.jpg" alt="荻村伊智朗" loading="lazy"></a></div>
 </div>
@@ -72,7 +73,7 @@ content="勝っても負けても卓球好き。大会情報・動画・コラ�
   <div class="rubber-feature__marquee" aria-hidden="true">
     <div class="rubber-feature__marquee-track">
       <span>ZYRE-03· vs· GLAZER·</span>
-      <span>ZYRE-03· vs· GLAZER·</span>
+      <span>どっちもいいに決まってる</span>
     </div>
   </div>
 
@@ -109,7 +110,7 @@ content="勝っても負けても卓球好き。大会情報・動画・コラ�
       <p>
           卓球を始めて計10年。<br>
           勝てないし、最近用具高くない？<br>
-          腕も痛いし…。通院中(2026/8/8 サイト工事中)
+          腕も痛いし…。ラバー不足してるらしいよ。<br>サイト作成中(9/9更新)
       </p>
       <span>— 運営担当</span>
   </div>
@@ -133,47 +134,87 @@ content="勝っても負けても卓球好き。大会情報・動画・コラ�
 <a href="now-planning.htm" class="menu-card"><img src="images/menu05.jpg"><div class="menu-content"><h3>EVENT</h3><p>チーム練習・イベント情報</p></div></a>
 <a href="now-planning.htm" class="menu-card"><img src="images/menu06.jpg"><div class="menu-content"><h3>ADVISER</h3><p>特別に上手くなりたい方へ</p></div></a>
 <a href="feature/index.html" class="menu-card"><img src="images/menu07.jpg"><div class="menu-content"><h3>COLUMNS</h3><p>たきゅっこコラム「今日もネットイン日和」</p></div></a>
-<a href="rubber/shop.html" class="menu-card"><img src="images/menu08.jpg"><div class="menu-content"><h3>SHOPPING</h3><p>ラバー最安の殿堂「たきゅポチ」</p></div></a>
+<a href="rubber/index.html" class="menu-card"><img src="images/menu08.jpg"><div class="menu-content"><h3>SHOPPING</h3><p>ラバー最安の殿堂「たきゅポチ」</p></div></a>
 </div>
 </section>
 
 <section class="news">
   <h2 data-en="NEWS">お知らせ</h2>
 
-    <article>
-      <span class="date">2026.08.08</span>
-      <h3>トップページ動画エリア、松平健太vs.丹羽孝希　夢の対決。更新</h3>
-    </article>
-  <a href="feature/20260820-trick-serves.htm">
-    <article>
-      <span class="date">2026.08.20</span>
-      <h3>卓球界のサービスガイに学ぶ
-        試合の流れを変える「3つのトリックサーブ」</h3>
-    </article>
-  </a>
-  <a href="match/match.html">
-    <article>
-      <span class="date">2026.08.20</span>
-      <h3>千葉・東京など試合情報9-10月追加しました。</h3>
-    </article>
-  </a>
+  <div class="news-tabs">
+    <button type="button" class="news-tab active" data-filter="all">新着</button>
+    <button type="button" class="news-tab" data-filter="column">コラム</button>
+    <button type="button" class="news-tab" data-filter="match">試合情報</button>
+  </div>
 
+  <div class="news-list">
+
+   <!-- NEWSページ追加 -->
+        <a href="news/index.html"
+        class="news-item"
+        data-category="all">
+       <article>
+         <span class="date">2026.09.13</span>
+         <h3>９・10月のNEWS追加しました。</h3>
+       </article>
+     </a>
+
+    <!-- jin-takuya -->
+    <a href="feature/20260909-jin-takuya-god-serve.htm"
+       class="news-item"
+       data-category="column">
+      <article>
+        <span class="date">2026.09.09</span>
+        <h3>
+          世界一サーブが上手いと言われる「神拓也」選手
+          色々な角度から見て参考にしよう。
+        </h3>
+      </article>
+    </a>
+
+    <!-- SAN-EI杯 -->
+        <a href="feature/20260901-sanei-cup-i2u.htm"
+        class="news-item"
+        data-category="column">
+       <article>
+         <span class="date">2026.09.01</span>
+         <h3>
+           【i2U】SAN-EIが「第1回 SAN-EI杯」を開催
+           優勝者には、国際大会で使用されたSAN-EI卓球台1台を進呈
+         </h3>
+       </article>
+     </a>
+
+
+    <!-- 試合情報 -->
+    <a href="match/match.html"
+       class="news-item"
+       data-category="match">
+      <article>
+        <span class="date">2026.08.25</span>
+        <h3>千葉・東京など試合情報9-10月p4追加しました。</h3>
+      </article>
+    </a>
+
+  </div>
 </section>
 
 <section class="youtube">
   <h2 data-en="MOVIE">動画</h2>
-  <a href="https://www.youtube.com/watch?v=HaExNW6yT0g"
-  target="_blank"
-  class="youtube-card">
-
- <img src="https://img.youtube.com/vi/HaExNW6yT0g/maxresdefault.jpg"
-      alt="YouTube動画">
- <div class="play-button">▶</div>
-</a>
+  <div class="youtube-card">
+    <iframe
+      src="https://www.youtube.com/embed/ZOOVLCnPrno"
+      title="ノジマTリーグ 2026-2027シーズンの公式戦"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
 <div class="youtube-info">
-<h3>必見！松平健太vs. 丹羽孝希　76回 全日本実業団卓球選手権大会(7/31)</h3>
-<p>2026年7月30日（木）〜8月2日（日）にセーレン・ドリームアリーナで行われた「第76回全日本実業団卓球選手権大会」。<br />
-夢の超注目カード。2人の唯一無二のテクニックがぶつかり合う。最高世界ランク5位の丹羽のコキニワカットブロック×最高世界ランキング9位の松平のライジングバックドライブは見応えあり。</p>
+<h3>小林りんごが開幕戦以来の勝利で繋ぐ！第5戦ハイライト</h3>
+<p>2026年9月6日に開催されたノジマTリーグ 2026-2027シーズンの公式戦は、3-1でトップおとめピンポンズ名古屋が勝利。<br />
+息をの瞬間、その先の衝撃。</p>
 </div>
 <button type="button" class="more-btn" id="movieMoreBtn">
   MORE VIEW
@@ -198,13 +239,13 @@ content="勝っても負けても卓球好き。大会情報・動画・コラ�
 
   <h2 data-en="ABOUT">ABOUT</h2>
   <p class="about-sub">たきゅっこ暮らしについて</p>
-  
+
   <div class="about-wrap">
-  
+
       <div class="about-image">
           <img src="images/about.jpg" alt="">
       </div>
-  
+
       <div class="about-text">
           <h3>卓球が、もっと好きになる。</h3>
           <p>たきゅっこ暮らしは、卓球を通じて人と人をつなげるコミュニティサイトです。

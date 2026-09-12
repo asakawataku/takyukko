@@ -106,8 +106,8 @@ if(movieMoreBtn && movieSliderArea && movieSlider){
         url: "https://www.youtube.com/watch?v=ViSLNF2pRU0"
       },
       {
-        title: "WTTスターコンテンダーサン・ジョゼ・ドス・カンポス2026混合ダブルス<br/>【決勝】戸上隼輔/大藤沙月 vs カルデラノ/B.タカハシ",
-        url: "https://www.youtube.com/watch?v=1ol7vgOSVoE"
+        title: "必見！松平健太vs. 丹羽孝希　76回 全日本実業団卓球選手権大会(7/31)",
+        url: "https://www.youtube.com/watch?v=HaExNW6yT0g"
       },
       {
         title: "全日本マスターズ王者！松平vs飯野<br/>健太敗北か？",
@@ -216,3 +216,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   flyObserver.observe(newsSection);
 });
+
+/* ニュースタブ切り替え*/
+const newsTabs = document.querySelectorAll(".news-tab");
+const newsItems = document.querySelectorAll(".news-item");
+
+if(newsTabs.length && newsItems.length){
+
+  newsTabs.forEach(tab=>{
+    tab.addEventListener("click", ()=>{
+      newsTabs.forEach(t=>t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const filter = tab.dataset.filter;
+
+      newsItems.forEach(item=>{
+        const show = filter === "all" || item.dataset.category === filter;
+        item.classList.toggle("hide", !show);
+      });
+    });
+  });
+}

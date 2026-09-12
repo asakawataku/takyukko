@@ -1,105 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const newsList = document.getElementById("newsList");
-  const pagination = document.getElementById("newsPagination");
+document.addEventListener("DOMContentLoaded", function () {
+  const reduce = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (!newsList || !pagination) return;
+  const wipe = document.createElement("div");
+  wipe.className = "tt-page-transition";
+  wipe.setAttribute("aria-hidden", "true");
+  document.body.appendChild(wipe);
 
-  const newsItems = [...newsList.querySelectorAll(".news-row")];
-  const dateGroups = [...newsList.querySelectorAll(".news-date-group")];
+  // 遷移先では、グラデーションをそのまま右へ素早く抜く
+  if (!reduce && sessionStorage.getItem("tt-transition") === "1") {
+    sessionStorage.removeItem("tt-transition");
+    wipe.classList.add("is-out");
 
-  const itemsPerPage = 30;
-  const totalPages = Math.ceil(newsItems.length / itemsPerPage);
-
-  let currentPage = 1;
-
-  function updateDateGroups() {
-    dateGroups.forEach(group => {
-      const visible = [...group.querySelectorAll(".news-row")]
-        .some(item => !item.hidden);
-
-      group.hidden = !visible;
-    });
+    window.setTimeout(function () {
+      wipe.className = "tt-page-transition";
+    }, 360);
   }
 
-  function createButton(label, page, current = false, disabled = false) {
-    const button = document.createElement("button");
+  document.addEventListener("click", function (e) {
+    const a = e.target.closest(".news-row__link");
+    if (!a || reduce) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
-    button.type = "button";
-    button.textContent = label;
-    button.className = "news-pagination__button";
+    const href = a.getAttribute("href");
+    if (!href || href.startsWith("#")) return;
 
-    if (current) {
-      button.classList.add("is-current");
-      button.setAttribute("aria-current", "page");
-    }
+    const url = new URL(a.href, location.href);
+    if (url.origin !== location.origin) return;
 
-    button.disabled = disabled;
+    e.preventDefault();
+    if (wipe.classList.contains("is-in")) return;
 
-    button.addEventListener("click", () => {
-      showPage(page);
-    });
+    wipe.classList.add("is-in");
+    sessionStorage.setItem("tt-transition", "1");
 
-    return button;
-  }
-
-  function renderPagination() {
-
-    pagination.innerHTML = "";
-
-    if (totalPages <= 1) {
-      pagination.hidden = true;
-      return;
-    }
-
-    pagination.hidden = false;
-
-    pagination.appendChild(
-      createButton("PREV", currentPage - 1, false, currentPage === 1)
-    );
-
-    for (let i = 1; i <= totalPages; i++) {
-      pagination.appendChild(
-        createButton(
-          String(i).padStart(2, "0"),
-          i,
-          i === currentPage,
-          false
-        )
-      );
-    }
-
-    pagination.appendChild(
-      createButton(
-        "NEXT",
-        currentPage + 1,
-        false,
-        currentPage === totalPages
-      )
-    );
-  }
-
-  function showPage(page) {
-
-    currentPage = Math.max(
-      1,
-      Math.min(page, totalPages)
-    );
-
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-
-    newsItems.forEach((item, index) => {
-      item.hidden = !(index >= start && index < end);
-    });
-
-    updateDateGroups();
-    renderPagination();
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-  showPage(1);
+    // 前版よりかなり速く次ページへ
+    window.setTimeout(function () {
+      location.href = url.href;
+    }, 285);
+  });
 });
