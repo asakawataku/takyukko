@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const DATA_URL = "./data/articles.json";
+  const DATA_URL = "/feature/data/articles.json?v=20260914";
   const ITEMS_PER_PAGE = 12;
 
   const articleGrid = document.querySelector("#articleGrid");
