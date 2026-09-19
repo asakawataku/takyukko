@@ -233,7 +233,9 @@ body.news-site{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
-  margin-bottom:28px;
+  max-width:760px;
+  margin:0 auto 28px;
+  padding:0 4px;
   color:#7b858e;
   font-size:11px;
 }
@@ -245,7 +247,7 @@ body.news-site{
   width:100%;
   max-width:none !important;
   margin:0 !important;
-  padding:38px 16px 90px !important;
+  padding:78px 16px 90px !important;
   background:rgba(255,255,255,.92);
   backdrop-filter:blur(6px);
   -webkit-backdrop-filter:blur(6px);
