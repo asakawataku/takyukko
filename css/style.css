@@ -812,6 +812,72 @@ line-height:2;
 
 }
 
+.pickup-slider-wrap {
+  position: relative;
+}
+
+.pickup-arrow {
+  display: none;
+}
+
+/* PCのみ表示 */
+@media (min-width: 768px) {
+
+  .pickup-slider-wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .pickup-slider {
+    max-width: none;
+    margin: 0;
+  }
+
+  .pickup-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .pickup-arrow--prev {
+    left: 12px;
+  }
+
+  .pickup-arrow--next {
+    right: 12px;
+  }
+  /* PC用メディアクエリ終了 */
+}
+
 
 
 /* ==========================================

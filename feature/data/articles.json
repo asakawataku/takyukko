@@ -1,5 +1,65 @@
 [
   {
+    "id": "20260926-dont-run-away-weird-styles",
+    "title": "苦手な相手から逃げるな。表ソフト・粒高・変則打法への実戦対策",
+    "description": "Butterfly Onlineの技術コラムをきっかけに、表ソフト・粒高・左利き・カットマンなど、苦手な戦型への向き合い方を一般プレーヤー目線で考えます。",
+    "date": "2026-09-26",
+    "category": "COLUMN",
+    "tags": [
+      "メンタル"
+    ],
+    "image": "images/20260926-dont-run-away.png",
+    "url": "20260926-dont-run-away-weird-styles.htm"
+  },
+  {
+    "id": "20260926-ma-lin-ghost-serve",
+    "title": "【世界の変な名前サーブ】幽霊!? ボールが戻ってくる「ゴーストサーブ」とは｜馬琳",
+    "description": "馬琳で知られる「ゴーストサーブ」を3本の動画で紹介。本人のスロー映像、Butterflyが紹介する1999年ワルドナー戦、一般プレーヤーによる実演から特徴と面白さを見ていきます。",
+    "date": "2026-09-26",
+    "category": "COLUMN",
+    "tags": [
+      "サーブ"
+    ],
+    "image": "images/20260926-ma-lin-ghost-serve.png",
+    "url": "20260926-ma-lin-ghost-serve.htm"
+  },
+  {
+    "id": "20260926-alexis-lebrun-lollipop-serve",
+    "title": "【世界の変な名前サーブ】ペロペロキャンディー!?「ロリポップサーブ」とは｜アレクシス・ルブラン",
+    "description": "WTT公式動画から、アレクシス・ルブランが実戦で使用する「ロリポップサーブ」を紹介。独特なラケットワークやフォーム、名前の意味、動画で注目したいポイントを解説します。",
+    "date": "2026-09-26",
+    "category": "COLUMN",
+    "tags": [
+      "サーブ"
+    ],
+    "image": "images/20260926-alexis-lebrun-lollipop-serve.png",
+    "url": "20260926-alexis-lebrun-lollipop-serve.htm"
+  },
+  {
+    "id": "20260924-yokohama-league-40s",
+    "title": "飛べない40代卓球愛好家の視点「勝てな過ぎて悲しい。卓球最下層。」第56回横浜後期リーグ卓球大会",
+    "description": "第56回横浜後期リーグ卓球大会・男子団体9部に参加。9部なのに初段やコーチクラスもいる選手層の厚さと、勝てない40代卓球愛好家のリアルを綴ります。",
+    "date": "2026-09-24",
+    "category": "COLUMN",
+    "tags": [
+      "大会"
+    ],
+    "image": "images/20260924-yokohama-league-40s.png",
+    "url": "20260924-yokohama-league-40s.htm"
+  },
+  {
+    "id": "20260922-hamakawa-monster-yg-andro",
+    "title": "濱川明史さんの「モンスターYG」完全まとめ｜andro公式動画で入門から上級まで",
+    "description": "andro公式チャンネルの濱川明史さん『モンスターYG』動画をまとめて紹介。入門編の基本フォームから、アップダウンYG、逆に曲がるYG、台の外から戻るYGまで順番に見ていきます。",
+    "date": "2026-09-22",
+    "category": "COLUMN",
+    "tags": [
+      "サーブ"
+    ],
+    "image": "images/20260922-hamakawa-monster-yg-andro.jpg",
+    "url": "20260922-hamakawa-monster-yg-andro.htm"
+  },
+  {
     "id": "20260918-crazy-sidespin-serve",
     "title": "曲がる、逃げる、相手を止める。「CRAZY SIDESPIN SERVE」で学ぶ横回転サーブ",
     "description": "MLFM Table Tennisの『Learning CRAZY Sidespin Serve』を紹介。強烈な横回転サーブをテーマに、薄いインパクト、ラケット角度、コース、3球目までの考え方をアマチュア目線で見ていきます。",
@@ -25,8 +85,8 @@
   },
   {
     "id": "20260909-jin-takuya-god-serve",
-    "title": "世界一サーブが上手いと言われる「神拓也」選手　色々な角度から見て参考にしよう。",
-    "description": "世界一サーブが上手いと言われる神拓也選手。サーブを受ける動画、10種類以上のサーブ、馬龍戦の3本を色々な角度から見て参考にします。",
+    "title": "世界一サーブが上手いと言われる「神巧也」選手　色々な角度から見て参考にしよう。",
+    "description": "世界一サーブが上手いと言われる神巧也選手。サーブを受ける動画、10種類以上のサーブ、馬龍戦の3本を色々な角度から見て参考にします。",
     "date": "2026-09-09",
     "category": "COLUMN",
     "tags": [
@@ -92,7 +152,7 @@
     "date": "2026-08-25",
     "category": "COLUMN",
     "tags": [
-      "P4MATCH"
+      "p4match"
     ],
     "image": "images/20260825-zizo-open.png",
     "url": "20260825-zizo-open.htm"
@@ -129,8 +189,7 @@
     "date": "2026-08-20",
     "category": "TECHNIQUE",
     "tags": [
-      "サーブ",
-      "卓球技術"
+      "サーブ"
     ],
     "image": "images/20260820-trick-serves.png",
     "url": "20260820-trick-serves.htm"
@@ -142,8 +201,7 @@
     "date": "2026-08-18",
     "category": "TECHNIQUE",
     "tags": [
-      "サーブ",
-      "卓球技術"
+      "サーブ"
     ],
     "image": "images/20260818-killer-serves.jpg",
     "url": "20260818-killer-serves.htm"
@@ -156,8 +214,7 @@
     "category": "TECHNIQUE",
     "tags": [
       "中国卓球",
-      "ナックル",
-      "卓球技術"
+      "ナックル"
     ],
     "image": "images/20260813-chinese-knuckle-ball.jpg",
     "url": "20260813-chinese-knuckle-ball.htm"
@@ -170,8 +227,7 @@
     "category": "RUBBER",
     "tags": [
       "TIBHAR",
-      "インフィニティ",
-      "ラバー"
+      "インフィニティ"
     ],
     "image": "images/infinity-mxs-mxp-review.jpg",
     "url": "20260813-infinity-mxs-mxp-review.htm"
@@ -196,8 +252,7 @@
     "category": "RUBBER",
     "tags": [
       "ロゼナ",
-      "バタフライ",
-      "ラバー"
+      "バタフライ"
     ],
     "image": "images/20260801-rozena-secret-weapon.jpg",
     "url": "20260801-rozena-secret-weapon.htm"
@@ -223,8 +278,7 @@
     "category": "TECHNIQUE",
     "tags": [
       "中国卓球",
-      "初心者",
-      "技術解説"
+      "初心者"
     ],
     "image": "images/20260731-chinese-table-tennis-basics.jpg",
     "url": "20260731-chinese-table-tennis-basics.htm"
@@ -238,11 +292,8 @@
     "tags": [
       "ブラスタック",
       "ニッタク",
-      "ラバー",
       "レビュー",
-      "試打",
-      "中級者",
-      "動画まとめ"
+      "中級者"
     ],
     "image": "images/20260730-blastack-video-review.jpg",
     "url": "20260730-blastack-video-review.htm"
@@ -255,7 +306,6 @@
     "category": "RUBBER",
     "tags": [
       "表ソフト",
-      "VO102",
       "レビュー"
     ],
     "image": "images/20260730-short-pips-comparison.jpg",
@@ -268,12 +318,9 @@
     "date": "2026-07-30",
     "category": "RUBBER",
     "tags": [
-      "裏ソフト",
       "ザイア03",
       "バタフライ",
-      "レビュー",
-      "試打",
-      "動画まとめ"
+      "レビュー"
     ],
     "image": "images/20260730-zyre03-video-review.jpg",
     "url": "20260730-zyre03-video-review.htm"
@@ -285,7 +332,6 @@
     "date": "2026-07-30",
     "category": "YouTuber",
     "tags": [
-      "YouTuber",
       "卓球芸人ぴんぽん",
       "卓キチ"
     ],
@@ -299,7 +345,6 @@
     "date": "2026-07-29",
     "category": "YouTuber",
     "tags": [
-      "YouTuber",
       "グレイザーマン"
     ],
     "image": "images/20260729-youtuber-glazerman.jpg",
@@ -312,8 +357,7 @@
     "date": "2026-07-29",
     "category": "YouTuber",
     "tags": [
-      "YouTuber",
-      "あおちゃん"
+      "あおちゃんねる"
     ],
     "image": "images/20260729-youtuber-aochan.jpg",
     "url": "20260729-youtuber-aochan.htm"
@@ -326,8 +370,7 @@
     "category": "ITEM",
     "tags": [
       "バタフライ",
-      "中級者",
-      "卓球用品"
+      "中級者"
     ],
     "image": "images/20260728-item-power-tape.jpg",
     "url": "20260728-item-powertape.htm"
@@ -339,10 +382,7 @@
     "date": "2026-07-26",
     "category": "YouTuber",
     "tags": [
-      "平野美宇",
-      "YouTuber",
-      "日本代表",
-      "プロ選手"
+      "平野美宇"
     ],
     "image": "images/20260728-youtuber-hirano.jpg",
     "url": "20260728-youtuber-hirano.htm"
@@ -356,8 +396,7 @@
     "tags": [
       "初心者",
       "バックドライブ",
-      "中国卓球",
-      "技術解説"
+      "中国卓球"
     ],
     "image": "images/20260726-backhand-drive.jpg",
     "url": "20260726-backhand-drive-guide.htm"
@@ -371,8 +410,7 @@
     "tags": [
       "初心者",
       "ツッツキ",
-      "中国卓球",
-      "技術解説"
+      "中国卓球"
     ],
     "image": "images/20260726-tsuttsuki-guide.jpg",
     "url": "20260726-tsuttsuki-guide.htm"
@@ -384,9 +422,7 @@
     "date": "2026-07-23",
     "category": "RUBBER",
     "tags": [
-      "ラバー",
       "ファスタークG-1",
-      "AI分析",
       "初心者"
     ],
     "image": "images/20260723G1.jpg",
@@ -400,8 +436,7 @@
     "category": "ITEM",
     "tags": [
       "バタフライ",
-      "ナノブロック",
-      "卓球用品"
+      "ナノブロック"
     ],
     "image": "images/20260723nanoblock.jpg",
     "url": "20260723nanoblock.htm"
@@ -414,9 +449,7 @@
     "category": "MATCH",
     "tags": [
       "p4match",
-      "大会",
-      "レーティング",
-      "試合情報"
+      "大会"
     ],
     "image": "images/20260722p4match.jpg",
     "url": "20260722p4match.htm"
@@ -428,10 +461,7 @@
     "date": "2026-07-21",
     "category": "COLUMN",
     "tags": [
-      "卓キチ",
-      "YouTube",
-      "ビジネス",
-      "コラム"
+      "卓キチ"
     ],
     "image": "images/20260721takukichi.jpg",
     "url": "20260721takukichi.htm"
@@ -443,10 +473,9 @@
     "date": "2026-07-20",
     "category": "RUBBER",
     "tags": [
-      "グレイザー",
       "ザイア03",
-      "ラバー比較",
-      "初中級者"
+      "レビュー",
+      "中級者"
     ],
     "image": "images/zyre03-glayzer.jpg",
     "url": "zyre03-glayzer.htm"

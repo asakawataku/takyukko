@@ -217,6 +217,32 @@ document.addEventListener("DOMContentLoaded", () => {
   flyObserver.observe(newsSection);
 });
 
+/* 
+const slider = document.querySelector('.pickup-slider');
+const prevBtn = document.querySelector('.pickup-arrow--prev');
+const nextBtn = document.querySelector('.pickup-arrow--next');
+
+const getScrollAmount = () => {
+  const banner = slider.querySelector('.pickup-banner');
+  const gap = 12;
+
+  return banner.offsetWidth + gap;
+};
+
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({
+    left: getScrollAmount(),
+    behavior: 'smooth'
+  });
+});
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({
+    left: -getScrollAmount(),
+    behavior: 'smooth'
+  });
+});
+*/
 /* ニュースタブ切り替え*/
 const newsTabs = document.querySelectorAll(".news-tab");
 const newsItems = document.querySelectorAll(".news-item");
