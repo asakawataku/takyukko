@@ -1,5 +1,120 @@
 [
   {
+    "id": "20261015-all-japan-masters-tokyo-representative",
+    "title": "全日本マスターズ2026開幕直前！ 東京都代表と試合をしてきた",
+    "description": "オープン戦Aランクに参加したら、全日本マスターズ2026の東京都代表と対戦！ 完敗の中で見つけた、上級者には何か通用したのか。",
+    "date": "2026-10-15",
+    "category": "FEATURE",
+    "tags": [
+      "大会"
+    ],
+    "image": "images/20261015-all-japan-masters-tokyo-representative.png",
+    "url": "20261015-all-japan-masters-tokyo-representative.htm"
+  },
+  {
+    "id": "20261012-hitomi-sato-chopper-2026",
+    "title": "佐藤瞳はなぜ中国の強豪に勝てたのか？ カットマンの常識を覆す「促進ルール」と攻撃力【2026年】",
+    "description": "2026年、佐藤瞳が中国の世界トップ選手を次々と撃破。チャイナスマッシュの逆転劇を、促進ルール対策、攻撃力、ディグニクス09CとカールP1Vの特性から考察します。",
+    "date": "2026-10-12",
+    "category": "FEATURE",
+    "tags": [
+      "技術"
+    ],
+    "image": "images/20261012-hitomi-sato-chopper-2026.png",
+    "url": "20261012-hitomi-sato-chopper-2026.htm"
+  },
+  {
+    "id": "20261012-tomahawk-oji-serve",
+    "title": "【世界の変な名前サーブ】トマホーク＆王子サーブの二刀流は可能なのか？",
+    "description": "トマホークと王子サーブの由来や二刀流の可能性を動画で紹介。",
+    "date": "2026-10-12",
+    "category": "FEATURE",
+    "tags": ["トマホーク"],
+    "image": "images/20261012-tomahawk-oji-serve.png",
+    "url": "20261012-tomahawk-oji-serve.htm"
+  },
+  {
+    "id": "20261009-table-tennis-practice-music-best5",
+    "title": "卓球と相性抜群!? 練習中に聴きたい神曲BEST5【公式MV付き】2026",
+    "description": "卓球の練習中に流したい神曲BEST5。トップ卓球選手が聴いていた曲を中心に、石川佳純、張本智和、平野美宇らの音楽エピソードと公式MVを紹介。音楽とスポーツの研究も紹介します。",
+    "date": "2026-10-09",
+    "category": "COLUMN",
+    "tags": [
+      "音楽"
+    ],
+    "image": "images/20261009-table-tennis-practice-music-best5.png",
+    "url": "20261009-table-tennis-practice-music-best5.htm"
+  },
+  {
+    "title": "全日本マスターズ2026　千葉県予選　参加増",
+    "date": "2026-10-08",
+    "image": "images/20261008-all-japan-masters-chiba-qualifier.png",
+    "url": "20261008-all-japan-masters-chiba-qualifier.htm",
+    "category": "NEWS",
+    "tags": [
+      "大会"
+    ],
+    "description": "全日本マスターズ2026千葉県予選を2025年と比較。男子40は24人から32人へ増加し、下川裕平選手（Ignition）が代表権を獲得しました。"
+  },
+  {
+    "id": "20261004-fast-improvement-players-japan",
+    "title": "卓球の“爆速でうまくなった選手たち”日本編｜2週間でベスト8、3年足らずで全国準優勝…",
+    "description": "卓球を始めて2週間で市大会ベスト8、3年足らずで全日本カデット準優勝。打浪優と小塩遥菜の成長スピードや練習環境から、アマチュアでも真似できそうな上達のヒントを探ります。",
+    "date": "2026-10-04",
+    "category": "COLUMN",
+    "tags": [
+      "上達"
+    ],
+    "image": "images/20261004-fast-improvement-players-japan.png",
+    "url": "20261004-fast-improvement-players-japan.htm"
+  },
+  {
+    "id": "20261001-rubber-hardness-timo-boll",
+    "title": "硬いラバーはなぜ上級者向けなのか？ ティモ・ボルの用具史から読み解く「ラバー硬度」｜硬度を読み解く前編",
+    "description": "硬いラバーはなぜ上級者向けなのか。11歳でスレイバーFX 1.9mmから始めたティモ・ボルの用具変遷と、Butterfly・androの公式資料からラバー硬度の意味を読み解きます。",
+    "date": "2026-10-01",
+    "category": "RUBBER",
+    "tags": [
+      "ラバー"
+    ],
+    "image": "images/20261001-rubber-hardness-timo-boll.png",
+    "url": "20261001-rubber-hardness-timo-boll.htm"
+  },
+  {
+    "id": "20261001-rubber-hardness-guide-part2",
+    "title": "自分に合うラバー硬度は何度？40・45・48・50度台の選び方｜硬度を読み解く後編",
+    "description": "卓球ラバーの硬度は何度を選べばいい？androとButterflyの公式情報をもとに、40・45・48・50度台の違いと、自分に合うラバー硬度の選び方を解説します。",
+    "date": "2026-10-01",
+    "category": "RUBBER",
+    "tags": [
+      "ラバー"
+    ],
+    "image": "images/20261001-rubber-hardness-guide-part2.png",
+    "url": "20261001-rubber-hardness-guide-part2.htm"
+  },
+  {
+    "id": "20260930-goka-training-center",
+    "title": "卓球台24台だけじゃない！廃校を丸ごと改装した「五霞トレーニングセンター」がかなり本気だった",
+    "description": "卓球台最大24台、宿泊最大94名。旧五霞東小学校を活用した五霞トレーニングセンターを紹介します。",
+    "date": "2026-09-30",
+    "category": "COLUMN",
+    "tags": [
+      "卓球施設"
+    ],
+    "image": "images/20260930-goka-training-center.png",
+    "url": "20260930-goka-training-center.htm"
+  },
+  {
+    "id": "20260929-horizontal-spin-serve-receive",
+    "title": "苦手克服！「横回転サーブの取り方」の考え方｜天王山卓球向上メソッド",
+    "description": "横回転サーブのレシーブが苦手な人向けに、天王山卓球向上メソッドの3本の動画から、フォア側での打球タイミング、バックハンドで回転に沿う返し方、回転に逆らう応用まで整理します。",
+    "date": "2026-09-29",
+    "category": "COLUMN",
+    "tags": ["レシーブ"],
+    "image": "images/20260929-horizontal-spin-serve-receive.png",
+    "url": "20260929-horizontal-spin-serve-receive.htm"
+  },
+  {
     "id": "20260926-dont-run-away-weird-styles",
     "title": "苦手な相手から逃げるな。表ソフト・粒高・変則打法への実戦対策",
     "description": "Butterfly Onlineの技術コラムをきっかけに、表ソフト・粒高・左利き・カットマンなど、苦手な戦型への向き合い方を一般プレーヤー目線で考えます。",
@@ -459,7 +574,7 @@
     "title": "ニッチな市場で390万人のファンを集めたビジネスモデル",
     "description": "卓球というニッチな市場から大きな支持を獲得した発信とビジネスの仕組みを考えます。",
     "date": "2026-07-21",
-    "category": "COLUMN",
+    "category": "YouTuber",
     "tags": [
       "卓キチ"
     ],

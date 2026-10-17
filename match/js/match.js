@@ -3,10 +3,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   const empty = document.getElementById("matchEmpty");
   const tabs = [...document.querySelectorAll(".match-tab[data-filter]")];
   const jumpButtons = [...document.querySelectorAll("[data-jump-filter]")];
+  const archiveSwitch = document.getElementById("matchArchiveSwitch");
+  const archiveSwitchLabel = document.getElementById("matchArchiveSwitchLabel");
 
   if (!list) return;
 
   const DAY_NAMES = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  let currentFilter = "all";
+  let currentView = "upcoming";
+  let allMatches = [];
 
   const escapeHtml = (value = "") =>
     String(value)
@@ -20,6 +26,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const d = new Date(`${dateString}T00:00:00`);
     const [year, month, day] = dateString.split("-");
     return { year, md: `${month}.${day}`, day: DAY_NAMES[d.getDay()] };
+  };
+
+  const getTodayKey = () => {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, "0");
+    const d = String(now.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
   };
 
   const badge = (match) => {
@@ -92,60 +106,101 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   };
 
+  const matchesFilter = (match, filter) => {
+    if (filter === "all") return true;
+
+    if (["chiba", "tokyo", "other"].includes(filter)) {
+      return match.area === filter;
+    }
+
+    if (["official", "large", "p4match", "i2u"].includes(filter)) {
+      return (match.kind || "regular") === filter;
+    }
+
+    return false;
+  };
+
+  const getMatchesForCurrentView = () => {
+    const today = getTodayKey();
+
+    const target = allMatches.filter(match => {
+      if (!match?.date) return false;
+      return currentView === "archive"
+        ? match.date < today
+        : match.date >= today;
+    });
+
+    target.sort((a, b) => {
+      const dateCompare = currentView === "archive"
+        ? b.date.localeCompare(a.date)
+        : a.date.localeCompare(b.date);
+
+      if (dateCompare !== 0) return dateCompare;
+
+      return Number(a.priority || 999) - Number(b.priority || 999);
+    });
+
+    return target;
+  };
+
+  const updateTabs = () => {
+    tabs.forEach(tab => {
+      const active = tab.dataset.filter === currentFilter;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", String(active));
+    });
+  };
+
+  const updateArchiveSwitch = () => {
+    if (!archiveSwitch) return;
+
+    const archiveMode = currentView === "archive";
+    archiveSwitch.classList.toggle("is-archive", archiveMode);
+    archiveSwitch.setAttribute("aria-pressed", String(archiveMode));
+
+    if (archiveSwitchLabel) {
+      archiveSwitchLabel.textContent = archiveMode
+        ? "開催予定の大会に戻る"
+        : "過去の大会はコチラ";
+    }
+  };
+
+  const render = () => {
+    const viewMatches = getMatchesForCurrentView()
+      .filter(match => matchesFilter(match, currentFilter));
+
+    list.innerHTML = viewMatches.map(renderCard).join("");
+
+    if (empty) {
+      empty.textContent = currentView === "archive"
+        ? "該当する過去大会はまだありません。"
+        : "該当する大会情報はまだありません。";
+      empty.hidden = viewMatches.length !== 0;
+    }
+
+    updateTabs();
+    updateArchiveSwitch();
+  };
+
   try {
     const response = await fetch("data/matches.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`matches.json: HTTP ${response.status}`);
 
-    const matches = await response.json();
+    allMatches = await response.json();
 
-    // 開催日順に並び替え。同日の場合は priority の小さい順。
-    matches.sort((a, b) => {
-      if (a.date !== b.date) {
-        return a.date.localeCompare(b.date);
-      }
-
-      return (a.priority ?? 999) - (b.priority ?? 999);
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        currentFilter = tab.dataset.filter;
+        render();
+      });
     });
-
-    list.innerHTML = matches.map(renderCard).join("");
-
-    const matchesFilter = (card, filter) => {
-      if (filter === "all") return true;
-      if (["chiba", "tokyo", "other"].includes(filter)) {
-        return card.dataset.area === filter;
-      }
-      if (["official", "large", "p4match", "i2u"].includes(filter)) {
-        return card.dataset.kind === filter;
-      }
-      return false;
-    };
-
-    const applyFilter = (filter) => {
-      const cards = [...list.querySelectorAll(".match-card")];
-      let visibleCount = 0;
-
-      cards.forEach(card => {
-        const show = matchesFilter(card, filter);
-        card.hidden = !show;
-        if (show) visibleCount++;
-      });
-
-      if (empty) empty.hidden = visibleCount !== 0;
-
-      tabs.forEach(tab => {
-        const active = tab.dataset.filter === filter;
-        tab.classList.toggle("is-active", active);
-        tab.setAttribute("aria-selected", String(active));
-      });
-    };
-
-    tabs.forEach(tab =>
-      tab.addEventListener("click", () => applyFilter(tab.dataset.filter))
-    );
 
     jumpButtons.forEach(button => {
       button.addEventListener("click", () => {
-        applyFilter(button.dataset.jumpFilter);
+        currentFilter = button.dataset.jumpFilter;
+        currentView = "upcoming";
+        render();
+
         document.getElementById("match-list-title")?.scrollIntoView({
           behavior: "smooth",
           block: "start"
@@ -153,7 +208,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
 
-    applyFilter("all");
+    archiveSwitch?.addEventListener("click", () => {
+      currentView = currentView === "archive" ? "upcoming" : "archive";
+      render();
+    });
+
+    render();
   } catch (error) {
     console.error(error);
     list.innerHTML = `
