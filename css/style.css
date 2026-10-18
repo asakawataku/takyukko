@@ -269,7 +269,7 @@ section h2::before{
     letter-spacing:.12em;
 }
 
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px}
 .menu-card {
   display: block;
   text-decoration: none;
@@ -1161,7 +1161,7 @@ grid-template-columns:1fr 1fr;
 .sns-links a{border:1px solid #ddd;border-radius:999px;padding:14px;text-align:center;transition:.3s}
 .sns-links a:hover{background:#111;color:#fff;border-color:#111;}
 footer{padding:50px 20px;text-align:center;border-top:1px solid #eee;font-size:13px;color:#666}
-@media(min-width:768px){body{max-width:430px;margin:auto}}
+@media(min-width:768px){body{max-width:1024px;margin:auto}}
 
 
 /* ==========================================
